@@ -10,3 +10,11 @@ RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 # 補完機能
 autoload -U compinit
 compinit
+# コマンド履歴(100000件保持)
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+# 重複したコマンド履歴を無視する
+setopt hist_ignore_dups
+# コマンド履歴をターミナル毎に共有
+setopt share_history
