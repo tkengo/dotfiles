@@ -1,11 +1,58 @@
-"=========================
-" 基本設定
-"=========================
-" Vi互換モードを使わない
+"===========================================================================
+" Vundle settings
+"===========================================================================
 set nocompatible
-" 行番号を表示する
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" plugin list
+Bundle 'gmarik/vundle'
+Bundle 'unite.vim'
+
+" key mapping to vundle command
+nnoremap ,bi :BundleInstall<CR>
+nnoremap ,bu :BundleInstall!<CR>
+nnoremap ,bc :BundleClean<CR>
+
+filetype plugin indent on
+
+"===========================================================================
+" base settings
+"===========================================================================
+"---++
+" Visual settings
+"------------------++
+" set colorscheme
+colorscheme my
+" show line number
 set number
-" カーソル形状をセット
+" hide a menu and a toolbar
+set guioptions-=m
+set guioptions-=T
+"---++
+" Edit settings
+"------------------++
+" hide a buffer
+set hidden
+" don't make a swapfile
+set noswapfile
+set nobackup
+set writebackup
+" incremental search
+set incsearch
+" tab width set 4 spaces
+set tabstop=4
+set shiftwidth=4
+" don't expand tab to spaces
+set noexpandtab
+" set auto indent
+set autoindent
+set smartindent
+
+"----------------------------------------------------------------------------
+" GUI settings
 " 通常時は箱型、挿入時は棒型
 set guicursor=n-v-c:blinkwait500-blinkoff300-blinkon500-ver100,i:ver10
 " フォントの設定
@@ -13,29 +60,6 @@ set guifont=VL\ Gothic\ 10
 " 最大化で起動する
 set columns=1024
 set lines=900
-" メニューバーとツールバーを非表示
-set guioptions-=m
-set guioptions-=T
-" 保存していなくても別のバッファに移動できる
-set hidden
-" カラースキーマ
-colorscheme my
-" スワップファイルを作らない
-set noswapfile
-" ファイルの保存時だけバックアップを作り、成功したら削除する
-set nobackup
-set writebackup
-" インクリメンタルサーチをする
-set incsearch
-" Tab幅を4にする
-set tabstop=4
-set shiftwidth=4
-" 自動インデント
-set autoindent
-set smartindent
-" Tabをスペースに展開しない
-set noexpandtab
-
 "=========================
 " キーマップ
 "=========================
