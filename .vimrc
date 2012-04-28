@@ -8,7 +8,6 @@ set rtp+=~/.dotfiles/vundle/
 call vundle#rc()
 
 " プラグイン一覧
-"Bundle 'gmarik/vundle'
 Bundle 'unite.vim'
 Bundle 'violetyk/cake.vim'
 
@@ -22,6 +21,10 @@ filetype plugin indent on
 "===========================================================================
 " 基本設定
 "===========================================================================
+" マシン固有の設定は.vimrc.localに用意して読み込む
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
 " カラースキーマ
 colorscheme my
 " 行番号を表示
@@ -63,6 +66,7 @@ set lines=900
 "=========================
 " キーマップ
 "=========================
+" Ctrl + k を2回連続で検索語のハイライトを解除
 nnoremap <C-k><C-k> :nohlsearch<CR><Esc>
 
 "=========================
@@ -71,8 +75,6 @@ nnoremap <C-k><C-k> :nohlsearch<CR><Esc>
 "-------------------------
 " cake.vimの設定
 "-------------------------
-let g:cakephp_enable_fix_mode=1
-let g:cakephp_app="~/collective/app/"
 nnoremap <Space>cc :<C-u>Ccontroller 
 nnoremap <Space>cm :<C-u>Cmodel 
 nnoremap <Space>cv :<C-u>Cview 
