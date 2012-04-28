@@ -1,5 +1,5 @@
 "===========================================================================
-" Vundle settings
+" Vundle設定
 "===========================================================================
 set nocompatible
 filetype off
@@ -7,11 +7,11 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" plugin list
+" プラグイン一覧
 Bundle 'gmarik/vundle'
 Bundle 'unite.vim'
 
-" key mapping to vundle command
+" Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
 nnoremap ,bu :BundleInstall!<CR>
 nnoremap ,bc :BundleClean<CR>
@@ -19,35 +19,34 @@ nnoremap ,bc :BundleClean<CR>
 filetype plugin indent on
 
 "===========================================================================
-" base settings
+" 基本設定
 "===========================================================================
-"---++
-" Visual settings
-"------------------++
-" set colorscheme
+" カラースキーマ
 colorscheme my
-" show line number
+" 行番号を表示
 set number
-" hide a menu and a toolbar
+" メニューバーとツールバーを非表示
 set guioptions-=m
 set guioptions-=T
-"---++
-" Edit settings
-"------------------++
-" hide a buffer
+" ステータスラインを2行表示
+set laststatus=2
+
+" バッファを保存しなくても別のバッファを開ける
 set hidden
-" don't make a swapfile
+" スワップファイルを作らない
 set noswapfile
+" バックアップを作らない
 set nobackup
+" ファイル保存直前にはバックアップを作って保存に成功したらバックアップを消す
 set writebackup
-" incremental search
+" インクリメンタルサーチ
 set incsearch
-" tab width set 4 spaces
+" タブ幅はスペース4つ分
 set tabstop=4
 set shiftwidth=4
-" don't expand tab to spaces
+" タブをスペースに展開しない
 set noexpandtab
-" set auto indent
+" オートインデント
 set autoindent
 set smartindent
 
