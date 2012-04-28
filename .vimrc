@@ -4,12 +4,13 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.dotfiles/vundle/
 call vundle#rc()
 
 " プラグイン一覧
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
 Bundle 'unite.vim'
+Bundle 'violetyk/cake.vim'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
