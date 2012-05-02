@@ -54,6 +54,9 @@ set noexpandtab
 set autoindent
 set smartindent
 
+" 文字コード自動認識
+set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
+
 "----------------------------------------------------------------------------
 " GUI settings
 " 通常時は箱型、挿入時は棒型
