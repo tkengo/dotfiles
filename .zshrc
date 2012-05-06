@@ -32,3 +32,5 @@ setopt auto_pushd
 setopt list_packed
 # ビープ音を消す
 setopt nolistbeep
+# マシン固有の設定があれば読み込む
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
