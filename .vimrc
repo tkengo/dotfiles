@@ -10,6 +10,7 @@ call vundle#rc()
 " プラグイン一覧
 Bundle 'unite.vim'
 Bundle 'violetyk/cake.vim'
+Bundle 'Shougo/vimfiler'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
@@ -59,9 +60,6 @@ set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 set guicursor=n-v-c:blinkwait500-blinkoff300-blinkon500-ver100,i:ver10
 " フォントの設定
 set guifont=VL\ Gothic\ 10
-" 最大化で起動する
-set columns=1024
-set lines=900
 "=========================
 " キーマップ
 "=========================
