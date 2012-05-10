@@ -21,10 +21,6 @@ filetype plugin indent on
 "===========================================================================
 " 基本設定
 "===========================================================================
-" マシン固有の設定は.vimrc.localに用意して読み込む
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
 " カラースキーマ
 colorscheme my
 " 行番号を表示
@@ -101,3 +97,11 @@ nnoremap <silent> ,fb :<C-u>Unite buffer<CR>
 nnoremap <silent> ,ff :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " 最近使用したファイル一覧
 nnoremap <silent> ,fr :<C-u>Unite file_mru<CR>
+
+"===========================================================================
+" マシン固有の設定
+"===========================================================================
+" マシン固有の設定は.vimrc.localに用意して読み込む
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
