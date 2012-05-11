@@ -95,6 +95,10 @@ nnoremap <silent> ,fb :<C-u>Unite buffer<CR>
 nnoremap <silent> ,ff :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " 最近使用したファイル一覧
 nnoremap <silent> ,fr :<C-u>Unite file_mru<CR>
+"-------------------------
+" VimFilerの設定
+"-------------------------
+let g:vimfiler_as_default_explorer = 1
 
 "===========================================================================
 " マシン固有の設定
