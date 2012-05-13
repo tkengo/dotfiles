@@ -98,7 +98,8 @@ nnoremap <silent> ,fr :<C-u>Unite file_mru<CR>
 "-------------------------
 " VimFilerの設定
 "-------------------------
-let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_as_default_explorer=1
+let g:vimfiler_safe_mode_by_default=0
 
 "===========================================================================
 " マシン固有の設定
