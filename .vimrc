@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'unite.vim'
 Bundle 'violetyk/cake.vim'
 Bundle 'Shougo/vimfiler'
+Bundle 'surround.vim'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
