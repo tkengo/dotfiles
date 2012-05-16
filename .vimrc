@@ -12,6 +12,7 @@ Bundle 'unite.vim'
 Bundle 'violetyk/cake.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'surround.vim'
+Bundle 'ack.vim'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
@@ -61,11 +62,17 @@ set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 set guicursor=n-v-c:blinkwait500-blinkoff300-blinkon500-ver100,i:ver10
 " フォントの設定
 set guifont=VL\ Gothic\ 10
+
 "=========================
-" キーマップ
+" キーバインド
 "=========================
-" Ctrl + k を2回連続で検索語のハイライトを解除
+" 検索語のハイライトを解除
 nnoremap <C-k><C-k> :nohlsearch<CR><Esc>
+" 前後のバッファへ移動
+nnoremap <C-p> :bp<CR>
+nnoremap <C-n> :bn<CR>
+" バッファ削除
+nnoremap <Space><C-d> :bd<CR>
 
 "=========================
 " プラグイン設定
