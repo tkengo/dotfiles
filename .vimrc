@@ -95,14 +95,14 @@ nnoremap <Space>cs :<C-u>Cshell
 "-------------------------
 " unite.vimの設定
 "-------------------------
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> ,fb :<C-u>Unite buffer<CR>
 " ファイル一覧
 nnoremap <silent> ,ff :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " 最近使用したファイル一覧
 nnoremap <silent> ,fr :<C-u>Unite file_mru<CR>
+" /でインクリメンタルサーチ
+autocmd FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
 "-------------------------
 " VimFilerの設定
 "-------------------------
