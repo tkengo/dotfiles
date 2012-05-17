@@ -26,7 +26,7 @@ filetype plugin indent on
 "===========================================================================
 " カラースキーマ
 set t_Co=256
-colorscheme mymolokai
+colorscheme my
 " 行番号を表示
 set number
 " メニューバーとツールバーを非表示
@@ -73,7 +73,7 @@ nnoremap <C-k><C-k> :nohlsearch<CR><Esc>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
 " バッファ削除
-nnoremap <Space><C-d> :bd<CR>
+nnoremap ,<C-d> :bd<CR>
 
 "=========================
 " プラグイン設定
