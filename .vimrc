@@ -25,7 +25,8 @@ filetype plugin indent on
 " 基本設定
 "===========================================================================
 " カラースキーマ
-colorscheme my
+set t_Co=256
+colorscheme mymolokai
 " 行番号を表示
 set number
 " メニューバーとツールバーを非表示

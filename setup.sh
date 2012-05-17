@@ -5,6 +5,7 @@ GITLIST="
 .vim
 .vimrc
 .zshrc
+.tmux.conf
 "
 
 # リストの分だけ繰り返してシンボリックリンクをはる
