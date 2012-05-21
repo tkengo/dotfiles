@@ -53,6 +53,8 @@ set noexpandtab
 " オートインデント
 set autoindent
 set smartindent
+" 折り返さない
+set nowrap
 
 " 文字コード自動認識
 set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin

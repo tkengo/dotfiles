@@ -17,13 +17,18 @@ endif
 
 let g:colors_name="my"
 
+hi Normal          ctermfg=252
 hi Identifier      ctermfg=98	cterm=none
 hi Comment         ctermfg=47
 hi StorageClass    ctermfg=228
 hi String          ctermfg=131
-hi Boolean         ctermfg=105
+hi Boolean         ctermfg=160
 hi Conditional     ctermfg=105
 hi Operator        ctermfg=105
+hi Delimiter       ctermfg=107
+hi Function        ctermfg=105
+hi Repeat          ctermfg=27
+hi Statement       ctermfg=27
 
 
 
@@ -33,7 +38,6 @@ hi Constant        ctermfg=135               cterm=bold
 hi Cursor          ctermfg=16  ctermbg=253
 hi Debug           ctermfg=225               cterm=bold
 hi Define          ctermfg=81
-hi Delimiter       ctermfg=241
 
 hi DiffAdd                     ctermbg=24
 hi DiffChange      ctermfg=181 ctermbg=239
@@ -47,7 +51,6 @@ hi Exception       ctermfg=118               cterm=bold
 hi Float           ctermfg=135
 hi FoldColumn      ctermfg=67  ctermbg=16
 hi Folded          ctermfg=67  ctermbg=16
-hi Function        ctermfg=118
 hi Ignore          ctermfg=244 ctermbg=232
 hi IncSearch       ctermfg=193 ctermbg=16
 
@@ -69,7 +72,6 @@ hi PmenuThumb      ctermfg=81
 hi PreCondit       ctermfg=118               cterm=bold
 hi PreProc         ctermfg=118
 hi Question        ctermfg=81
-hi Repeat          ctermfg=161               cterm=bold
 hi Search          ctermfg=253 ctermbg=66
 
 " marks column
@@ -78,7 +80,6 @@ hi SpecialChar     ctermfg=161               cterm=bold
 hi SpecialComment  ctermfg=245               cterm=bold
 hi Special         ctermfg=81  ctermbg=232
 
-hi Statement       ctermfg=105
 hi StatusLine      ctermfg=238 ctermbg=253
 hi StatusLineNC    ctermfg=244 ctermbg=232
 hi Structure       ctermfg=81
@@ -96,7 +97,6 @@ hi Visual                      ctermbg=235
 hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
 hi WildMenu        ctermfg=81  ctermbg=16
 
-hi Normal          ctermfg=252
 hi CursorLine                  ctermbg=234   cterm=none
 hi CursorColumn                ctermbg=234
 hi ColorColumn                 ctermbg=234
