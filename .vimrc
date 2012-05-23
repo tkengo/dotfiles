@@ -76,6 +76,11 @@ nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
 " バッファ削除
 nnoremap ,<C-d> :bd<CR>
+" 日本語入力固定モード切替キー
+inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
+" PythonによるIBus制御指定
+let IM_CtrlIBusPython = 1
+imap <C-c> <C-[>
 
 "=========================
 " プラグイン設定
