@@ -10,8 +10,6 @@ RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 # 補完機能
 autoload -U compinit
 compinit
-# Viキーバインド
-bindkey -v
 # コマンド履歴(100000件保持)
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
