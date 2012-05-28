@@ -81,6 +81,10 @@ inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
 " PythonによるIBus制御指定
 let IM_CtrlIBusPython = 1
 imap <C-c> <C-[>
+" ヤンクした文字列で単語を置換
+nnoremap <silent> ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+nnoremap <silent> cy   ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+vnoremap <silent> cy   c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 
 "=========================
 " プラグイン設定
