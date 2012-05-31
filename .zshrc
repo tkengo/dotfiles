@@ -30,5 +30,12 @@ setopt auto_pushd
 setopt list_packed
 # ビープ音を消す
 setopt nolistbeep
+# tmuxを使ってる時にsshしたら新しくホスト名でウィンドウを作る
+if [ $TERM = 'screen-256color' ]; then
+    function newssh() {
+        tmux new-window -n $1 "exec ssh $1"
+    }
+    alias ssh=newssh
+fi
 # マシン固有の設定があれば読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
