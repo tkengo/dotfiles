@@ -83,6 +83,9 @@ let IM_CtrlIBusPython = 1
 imap <C-c> <C-[>
 " ヤンクした文字列で単語を置換
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
+" シェルと同じようにC-fとC-bで前後に移動
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
 
 "=========================
 " プラグイン設定
