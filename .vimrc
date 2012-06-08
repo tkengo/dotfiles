@@ -57,7 +57,7 @@ set smartindent
 set nowrap
 
 " 文字コード自動認識
-set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
+set fileencodings=utf-8,euc-jp,cp932,sjis
 
 "----------------------------------------------------------------------------
 " GUI settings
