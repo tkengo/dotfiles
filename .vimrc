@@ -59,13 +59,6 @@ set nowrap
 " 文字コード自動認識
 set fileencodings=utf-8,euc-jp,cp932,sjis
 
-"----------------------------------------------------------------------------
-" GUI settings
-" 通常時は箱型、挿入時は棒型
-set guicursor=n-v-c:blinkwait500-blinkoff300-blinkon500-ver100,i:ver10
-" フォントの設定
-set guifont=VL\ Gothic\ 10
-
 "=========================
 " キーバインド
 "=========================
