@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'unite.vim'
 Bundle 'violetyk/cake.vim'
 Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/neocomplcache'
 Bundle 'surround.vim'
 Bundle 'ack.vim'
 
@@ -114,6 +115,10 @@ autocmd FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
 "-------------------------
 let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
+"-------------------------
+" neocomplcacheの設定
+"-------------------------
+let g:neocomplcache_enable_at_startup=1
 
 "===========================================================================
 " マシン固有の設定
