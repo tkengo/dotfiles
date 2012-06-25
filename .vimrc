@@ -81,9 +81,6 @@ nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
 " シェルと同じようにC-fとC-bで前後に移動
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
-" 検索語を画面の真ん中に持ってくる
-nnoremap n nzz
-nnoremap N Nzz
 
 "=========================
 " プラグイン設定
