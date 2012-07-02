@@ -36,6 +36,8 @@ set guioptions-=m
 set guioptions-=T
 " ステータスラインを2行表示
 set laststatus=2
+" 検索語をハイライトするよう
+set hlsearch
 
 " バッファを保存しなくても別のバッファを開ける
 set hidden
