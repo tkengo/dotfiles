@@ -52,6 +52,9 @@ set incsearch
 " タブ幅はスペース4つ分
 set tabstop=4
 set shiftwidth=4
+" Rubyの場合はタブ幅2つ
+au BufNewFile,BufRead *.erb set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 " タブをスペースに展開しない
 set noexpandtab
 " オートインデント
