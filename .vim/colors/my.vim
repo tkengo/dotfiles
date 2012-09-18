@@ -31,6 +31,7 @@ hi Repeat          ctermfg=27
 hi Statement       ctermfg=27
 hi Special         ctermfg=254
 hi Visual          ctermfg=15  ctermbg=69
+hi MatchParen      ctermfg=15  ctermbg=57 cterm=bold
 
 
 
@@ -61,7 +62,6 @@ hi Label           ctermfg=229               cterm=none
 hi Macro           ctermfg=193
 hi SpecialKey      ctermfg=81
 
-hi MatchParen      ctermfg=238  ctermbg=250 cterm=bold
 hi ModeMsg         ctermfg=229
 hi MoreMsg         ctermfg=229
 
