@@ -30,6 +30,7 @@ hi Function        ctermfg=105
 hi Repeat          ctermfg=27
 hi Statement       ctermfg=27
 hi Special         ctermfg=254
+hi Visual          ctermfg=15  ctermbg=69
 
 
 
@@ -93,7 +94,6 @@ hi Underlined      ctermfg=244               cterm=underline
 
 hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
 hi VisualNOS                   ctermbg=238
-hi Visual                      ctermbg=235
 hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
 hi WildMenu        ctermfg=81  ctermbg=16
 
