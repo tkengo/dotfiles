@@ -12,6 +12,7 @@ Bundle 'unite.vim'
 Bundle 'violetyk/cake.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'surround.vim'
 Bundle 'ack.vim'
 
@@ -125,6 +126,11 @@ let g:vimfiler_safe_mode_by_default=0
 " neocomplcacheの設定
 "-------------------------
 let g:neocomplcache_enable_at_startup=1
+"-------------------------
+" neocomplcache-snippetsの設定
+"-------------------------
+let g:NeoComplCache_SnippetsDir = $HOME . '/.vim/snippets'
+imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "===========================================================================
 " マシン固有の設定
