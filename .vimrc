@@ -125,11 +125,11 @@ let g:vimfiler_safe_mode_by_default=0
 "-------------------------
 " neocomplcacheの設定
 "-------------------------
+" 起動時にneocomplcacheを有効化
 let g:neocomplcache_enable_at_startup=1
-"-------------------------
-" neocomplcache-snippetsの設定
-"-------------------------
+" 自作スニペットディレクトリ
 let g:NeoComplCache_SnippetsDir = $HOME . '/.vim/snippets'
+" Tabキーでスニペット展開するように
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "===========================================================================
