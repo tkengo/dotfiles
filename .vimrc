@@ -17,6 +17,9 @@ Bundle 'surround.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 't9md/vim-textmanip'
 Bundle 'ack.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'JavaScript-syntax'
+Bundle 'tpope/vim-rails'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
