@@ -16,3 +16,8 @@
 	s = status
 	a = add
 	cb = checkout -b
+[mergetool]
+	prompt = false
+	keepBackup = false
+[merge]
+	tool = vimdiff
