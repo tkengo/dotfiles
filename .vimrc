@@ -20,6 +20,7 @@ Bundle 'ack.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'JavaScript-syntax'
 Bundle 'tpope/vim-rails'
+Bundle 'tomtom/tcomment_vim'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
