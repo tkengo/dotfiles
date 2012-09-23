@@ -15,6 +15,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'surround.vim'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 't9md/vim-textmanip'
 Bundle 'ack.vim'
 
 " Vundleコマンドキーマップ
@@ -144,6 +145,14 @@ let g:EasyMotion_grouping=1
 " カラー設定変更
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
+"-------------------------
+" vim-textmanipの設定
+"-------------------------
+" 選択したテキストの移動
+vmap <C-j> <Plug>(textmanip-move-down)
+vmap <C-k> <Plug>(textmanip-move-up)
+vmap <C-h> <Plug>(textmanip-move-left)
+vmap <C-l> <Plug>(textmanip-move-right)
 
 "===========================================================================
 " マシン固有の設定
