@@ -1,0 +1,18 @@
+[include]
+    path = ~/.gitconfig.local
+[user]
+	name = Kengo Tateishi
+[core]
+	editor = vim
+[color]
+	ui = auto
+[diff]
+	external = git_vimdiff.sh
+[pager]
+	diff = 
+[alias]
+	co = checkout
+	ci = commit
+	s = status
+	a = add
+	cb = checkout -b
