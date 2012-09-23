@@ -44,6 +44,8 @@ set guioptions-=T
 set laststatus=2
 " 検索語をハイライトするよう
 set hlsearch
+" カレント行のハイライト
+set cursorline
 
 " バッファを保存しなくても別のバッファを開ける
 set hidden

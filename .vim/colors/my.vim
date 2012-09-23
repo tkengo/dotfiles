@@ -32,6 +32,7 @@ hi Statement       ctermfg=27
 hi Special         ctermfg=254
 hi Visual          ctermfg=15  ctermbg=69
 hi MatchParen      ctermfg=15  ctermbg=57 cterm=bold
+hi CursorLine                  ctermbg=237   cterm=none
 
 
 
@@ -97,7 +98,6 @@ hi VisualNOS                   ctermbg=238
 hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
 hi WildMenu        ctermfg=81  ctermbg=16
 
-hi CursorLine                  ctermbg=234   cterm=none
 hi CursorColumn                ctermbg=234
 hi ColorColumn                 ctermbg=234
 hi LineNr          ctermfg=250 ctermbg=234
