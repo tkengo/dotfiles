@@ -14,6 +14,7 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'surround.vim'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ack.vim'
 
 " Vundleコマンドキーマップ
@@ -131,6 +132,18 @@ let g:neocomplcache_enable_at_startup=1
 let g:NeoComplCache_SnippetsDir = $HOME . '/.vim/snippets'
 " Tabキーでスニペット展開するように
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+"-------------------------
+" easymotionの設定
+"-------------------------
+" ホームポジションに近いキーを使う
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+" <Leader>を;にキーにマップ
+let g:EasyMotion_leader_key=";"
+" 1ストローク選択を優先する
+let g:EasyMotion_grouping=1
+" カラー設定変更
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 "===========================================================================
 " マシン固有の設定

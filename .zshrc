@@ -33,19 +33,18 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-# 重複したコマンド履歴を無視する
-setopt hist_ignore_dups
-# コマンド履歴をターミナル毎に共有
-setopt share_history
 
-# 移動したディレクトリを記録
-setopt auto_pushd
+# setopt関連
+setopt hist_ignore_dups # 重複したコマンド履歴を無視する
+setopt share_history    # コマンド履歴をターミナル毎に共有
+setopt auto_pushd       # 移動したディレクトリを記録
+setopt list_packed      # 補完候補を詰めて表示
+setopt nolistbeep       # ビープ音を消す
 
-# 補完候補を詰めて表示
-setopt list_packed
-
-# ビープ音を消す
-setopt nolistbeep
+# alias関連
+alias g="git"
+alias r="rails"
+alias be="bundle exec"
 
 # マシン固有の設定があれば読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
