@@ -16,6 +16,11 @@
 	s = status
 	a = add
 	cb = checkout -b
+	d = diff
+    b = branch
+    l = log
+    lo = log --oneline
+    f = fetch
 [mergetool]
 	prompt = false
 	keepBackup = false
