@@ -19,6 +19,9 @@ precmd () {
 }
 RPROMPT="%1(v|%F{yellow}%1v%f|${RPROMPT})"
 
+# C-wでパス区切り削除(元のWORDCHARSから/を抜いた)
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
 # 補完機能
 autoload -U compinit
 compinit
