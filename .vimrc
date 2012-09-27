@@ -145,7 +145,7 @@ imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>
 " ホームポジションに近いキーを使う
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
 " <Leader>を;にキーにマップ
-let g:EasyMotion_leader_key=";"
+let g:EasyMotion_leader_key="K"
 " 1ストローク選択を優先する
 let g:EasyMotion_grouping=1
 " カラー設定変更
