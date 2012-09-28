@@ -21,6 +21,10 @@
     l = log
     lo = log --oneline
     f = fetch
+    pl = pull
+    plo = pull origin
+    ps = push
+    pso = push origin
 [mergetool]
 	prompt = false
 	keepBackup = false
