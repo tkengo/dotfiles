@@ -5,6 +5,13 @@ export LANG=ja_JP.UTF-8
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
 
+# rbenvの設定
+export RBENV_ROOT=$HOME/.rbenv
+if [ -d $RBENV_ROOT ]; then
+    export PATH=$RBENV_ROOT/bin:$PATH
+    eval "$(rbenv init -)"
+fi
+
 # プロンプトの設定
 autoload colors
 colors
