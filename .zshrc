@@ -54,5 +54,8 @@ alias g="git"
 alias r="rails"
 alias be="bundle exec"
 
+# autojump読み込み
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
 # マシン固有の設定があれば読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

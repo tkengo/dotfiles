@@ -24,3 +24,11 @@ done
 cd $DOTFILES_PATH
 git submodule init
 git submodule update
+
+# autojumpインストール
+cd $DOTFILES_PATH
+git clone git://github.com/joelthelion/autojump.git
+cd autojump
+chmod +x install.sh
+./install.sh
+cd .. && rm -fr autojump
