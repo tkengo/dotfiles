@@ -60,6 +60,7 @@ setopt nolistbeep       # ビープ音を消す
 alias g="git"
 alias r="rails"
 alias be="bundle exec"
+[ `uname` = "Darwin" ] && alias tmux="tmux_wrapper_for_mac.sh"
 
 # autojump読み込み
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
