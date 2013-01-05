@@ -23,11 +23,14 @@ RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 # VCSのブランチ名を右プロンプトに表示
 setopt prompt_subst
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 VCSINFO='${vcs_info_msg_0_}'
-RPROMPT="${RPROMPT}%F{yellow}${VCSINFO}%f"
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 # C-wでパス区切り削除(元のWORDCHARSから/を抜いた)
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
