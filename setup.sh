@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # シンボリックリンクをはるファイル、ディレクトリのリスト
 SYMLINK_LIST="
@@ -14,8 +14,7 @@ DOTFILES_PATH=$(cd $(dirname $0);pwd)
 BIN_PATH=$DOTFILES_PATH/bin
 
 # リストの分だけ繰り返してシンボリックリンクをはる
-for FILE in $SYMLINK_LIST;
-do
+for FILE in $SYMLINK_LIST; do
 	rm -fr ~/$FILE
 	ln -s $DOTFILES_PATH/$FILE ~/$FILE
 done
@@ -25,10 +24,9 @@ cd $DOTFILES_PATH
 git submodule init
 git submodule update
 
-# autojumpインストール
-cd $DOTFILES_PATH
-git clone git://github.com/joelthelion/autojump.git
-cd autojump
-chmod +x install.sh
-./install.sh
-cd .. && rm -fr autojump
+# セットアップシェルの実行
+SHELL_LIST=`ls setup`
+for FILE in $SHELL_LIST; do
+    chmod +x setup/$FILE
+    sh setup/$FILE
+done
