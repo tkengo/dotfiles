@@ -1,6 +1,10 @@
 # ロケールの設定
 export LANG=ja_JP.UTF-8
 
+# パスの設定
+BIN_PATH=~/.dotfiles/bin
+[ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
+
 # プロンプトの設定
 autoload colors
 colors
@@ -8,6 +12,7 @@ PROMPT="%{${fg[blue]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
+
 # ブランチ名を表示
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
