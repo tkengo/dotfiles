@@ -1,22 +1,22 @@
 [include]
     path = ~/.gitconfig.local
 [user]
-	name = Kengo Tateishi
+    name = Kengo Tateishi
 [core]
-	editor = vim
+    editor = vim
 [color]
-	ui = auto
+    ui = auto
 [diff]
-	external = git_vimdiff.sh
+    external = git_vimdiff.sh
 [pager]
-	diff = 
+    diff = 
 [alias]
-	co = checkout
-	ci = commit
-	s = status
-	a = add
-	cb = checkout -b
-	d = diff
+    co = checkout
+    ci = commit
+    s = status
+    a = add
+    cb = checkout -b
+    d = diff
     b = branch
     l = log
     lo = log --oneline
@@ -26,7 +26,7 @@
     ps = push
     pso = push origin
 [mergetool]
-	prompt = false
-	keepBackup = false
+    prompt = false
+    keepBackup = false
 [merge]
-	tool = vimdiff
+    tool = vimdiff
