@@ -20,16 +20,14 @@ PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 
-# ブランチ名を表示
+# VCSのブランチ名を右プロンプトに表示
+setopt prompt_subst
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-RPROMPT="%1(v|%F{yellow}%1v%f|${RPROMPT})"
+precmd () { vcs_info }
+VCSINFO='${vcs_info_msg_0_}'
+RPROMPT="${RPROMPT}%F{yellow}${VCSINFO}%f"
 
 # C-wでパス区切り削除(元のWORDCHARSから/を抜いた)
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
