@@ -15,10 +15,8 @@ git
 tig
 tmux
 reattach-to-user-namespace
+zsh
 "
 for FORMULA in $FORMULAS; do
-    [ -n "`brew list $FORMULA | grep 'Error: No such keg'`" ] && brew install $FORMULA
+    [ ! -L /usr/local/bin/$FORMULA ] && brew install $FORMULA
 done
-
-# homebrewを最新に更新
-brew update
