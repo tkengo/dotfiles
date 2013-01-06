@@ -36,3 +36,5 @@ for FILE in $SHELL_LIST; do
     chmod +x setup/$FILE
     sh setup/$FILE
 done
+
+echo Complete setup.sh

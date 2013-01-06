@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 既にインストール済みであれば何もしない
-[ -d ~/.autojump ] && echo autojump already has installed. && exit 0
+[ -d ~/.autojump ] && exit 0
 
 # autojumpインストール
 cd `dirname $0`
