@@ -19,6 +19,7 @@
     cb = checkout -b
     d = diff
     b = branch
+    ba = branch -a
     l = log
     lo = log --oneline
     f = fetch
