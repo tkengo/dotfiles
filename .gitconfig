@@ -13,6 +13,7 @@
 [alias]
     co = checkout
     ci = commit
+    cia = commit -a
     s = status
     a = add
     cb = checkout -b
