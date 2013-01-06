@@ -5,7 +5,7 @@
 
 # homebrewのインストール
 which brew > /dev/null 2>&1
-if [ $? -eq 0 ]; then
+if [ $? -eq 1 ]; then
     /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/aereal/master/Library/Contributions/install_homebrew.rb)"
 fi
 
