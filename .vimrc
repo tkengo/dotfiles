@@ -21,6 +21,10 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'JavaScript-syntax'
 Bundle 'tpope/vim-rails'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'ruby-matchit'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'h1mesuke/vim-alignta'
 
 " Vundleコマンドキーマップ
 nnoremap ,bi :BundleInstall<CR>
@@ -71,6 +75,9 @@ set autoindent
 set smartindent
 " 折り返さない
 set nowrap
+" 高速化
+set ttyfast
+set lazyredraw
 
 " 文字コード自動認識
 set fileencodings=utf-8,euc-jp,cp932,sjis
