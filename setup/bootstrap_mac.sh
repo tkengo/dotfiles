@@ -20,3 +20,16 @@ zsh
 for FORMULA in $FORMULAS; do
     [ ! -L /usr/local/bin/$FORMULA ] && brew install $FORMULA
 done
+
+# zshをログインシェルに変更
+ZSH_PATH=/usr/local/bin/zsh
+SHELLS_PATH=/etc/shells
+if [ -z "`cat $SHELLS_PATH | grep $ZSH_PATH`" ]; then
+    echo To add zsh to $SHELLS_PATH as standard shell please enter $USERNAME password.
+    sudo sh -c "echo $ZSH_PATH >> $SHELLS_PATH"
+fi
+if [ $SHELL != $ZSH_PATH ]; then
+    echo To change $USERNAME login shell to zsh please enter $USERNAME password.
+    chsh -s $ZSH_PATH
+    echo Complete changing login shell. Please relogin.
+fi
