@@ -9,10 +9,16 @@ if [ $? -eq 1 ]; then
     /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/aereal/master/Library/Contributions/install_homebrew.rb)"
 fi
 
-# homebrew最新化
-brew install git
-brew update
+# ライブラリのインストール
+FORMULAS="
+git
+tig
+tmux
+reattach-to-user-namespace
+"
+for FORMULA in $FORMULAS; do
+    [ -n "`brew list $FORMULA | grep 'Error: No such keg'`" ] && brew install $FORMULA
+done
 
-# 使うライブラリのインストール
-brew install tig tmux
-brew install reattach-to-user-namespace
+# homebrewを最新に更新
+brew update
