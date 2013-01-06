@@ -102,6 +102,7 @@ nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
 " シェルと同じようにC-fとC-bで前後に移動
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
+inoremap <C-d> <Right><C-h>
 
 "=========================
 " プラグイン設定
