@@ -29,7 +29,6 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-VCSINFO='${vcs_info_msg_0_}'
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 # C-wでパス区切り削除(元のWORDCHARSから/を抜いた)
