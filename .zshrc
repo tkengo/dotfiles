@@ -5,6 +5,12 @@ export LANG=ja_JP.UTF-8
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
 
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%B%U%F{red}%d%f%u%b'
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*' group-name ''
+
 # rbenvの設定
 export RBENV_ROOT=$HOME/.rbenv
 if [ -d $RBENV_ROOT ]; then
