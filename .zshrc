@@ -5,6 +5,8 @@ export LANG=ja_JP.UTF-8
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
 
+zstyle ':completion:*:*:git:*' script ~/.dotfiles/bin/git-completion.sh
+zstyle ':completion:*' matcher-list '' 'r:|[-_.]=**'
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%B%U%F{red}%d%f%u%b'
 zstyle ':completion:*:messages' format '%d'
