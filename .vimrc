@@ -72,6 +72,7 @@ nnoremap <silent> ,fr :<C-u>Unite file_mru<CR>
 nnoremap ,bi :BundleInstall<CR>
 nnoremap ,bu :BundleInstall!<CR>
 nnoremap ,bc :BundleClean<CR>
+nnoremap ,<C-r> :source ~/.vimrc<CR>
 
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
