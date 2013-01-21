@@ -25,8 +25,13 @@
     f = fetch
     pl = pull
     plo = pull origin
+    plom = pull origin master
     ps = push
     pso = push origin
+    psfo = push -f origin
+    psom = push origin master
+    r = rebase
+    t = log --oneline --decorate --all --decorate --graph
 [mergetool]
     prompt = false
     keepBackup = false
