@@ -20,8 +20,8 @@
     d = diff
     b = branch
     ba = branch -a
-    l = log
-    lo = log --oneline
+    lo = log
+    l = log --oneline
     f = fetch
     pl = pull
     plo = pull origin
