@@ -23,6 +23,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'ruby-matchit'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'h1mesuke/vim-alignta'
+Bundle 'basyura/unite-rails'
 
 filetype plugin indent on
 
@@ -59,6 +60,23 @@ au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 let IM_CtrlIBusPython = 1
 
 "-----------------------------
+" Plugin configuration
+"-----------------------------
+
+autocmd FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
+
+let g:vimfiler_as_default_explorer=1
+let g:vimfiler_safe_mode_by_default=0
+
+let g:neocomplcache_enable_at_startup=1
+
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+let g:EasyMotion_leader_key="E"
+let g:EasyMotion_grouping=1
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=blue
+
+"-----------------------------
 " key binding
 "-----------------------------
 nnoremap <silent> <C-k><C-k> :nohlsearch<CR><Esc>
@@ -73,6 +91,16 @@ nnoremap ,bi :BundleInstall<CR>
 nnoremap ,bu :BundleInstall!<CR>
 nnoremap ,bc :BundleClean<CR>
 nnoremap ,<C-r> :source ~/.vimrc<CR>
+nnoremap <C-j> J
+
+nmap K Ek
+nmap J Ej
+nmap W Ew
+nmap B Eb
+vmap K Ek
+vmap J Ej
+vmap W Ew
+vmap B Eb
 
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
@@ -86,23 +114,6 @@ vmap <C-j> <Plug>(textmanip-move-down)
 vmap <C-k> <Plug>(textmanip-move-up)
 vmap <C-h> <Plug>(textmanip-move-left)
 vmap <C-l> <Plug>(textmanip-move-right)
-
-"-----------------------------
-" Plugin configuration
-"-----------------------------
-
-autocmd FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
-
-let g:vimfiler_as_default_explorer=1
-let g:vimfiler_safe_mode_by_default=0
-
-let g:neocomplcache_enable_at_startup=1
-
-let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
-let g:EasyMotion_leader_key="K"
-let g:EasyMotion_grouping=1
-hi EasyMotionTarget ctermbg=none ctermfg=red
-hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 "-----------------------------
 " Local configuration
