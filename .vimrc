@@ -84,15 +84,30 @@ nnoremap <silent> <C-p> :bp<CR>
 nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
+nnoremap ,<C-r> :source ~/.vimrc<CR>
+nnoremap <C-j> J
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-d> <Right><C-h>
+inoremap <C-c> <C-[>
+inoremap <C-j> <C-r>=IMState('FixMode')<CR>
+
+" unite
 nnoremap <silent> ,fb :<C-u>Unite buffer<CR>
 nnoremap <silent> ,ff :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,fr :<C-u>Unite file_mru<CR>
+nnoremap <silent> ,flm :Unite rails/model<CR>
+nnoremap <silent> ,flc :Unite rails/controller<CR>
+nnoremap <silent> ,flv :Unite rails/view<CR>
+nnoremap <silent> ,flj :Unite rails/javascript<CR>
+nnoremap <silent> ,fls :Unite rails/stylesheet<CR>
+nnoremap <silent> ,flf :Unite rails/config<CR>
+
+" Vundle
 nnoremap ,bi :BundleInstall<CR>
 nnoremap ,bu :BundleInstall!<CR>
 nnoremap ,bc :BundleClean<CR>
-nnoremap ,<C-r> :source ~/.vimrc<CR>
-nnoremap <C-j> J
 
+" EasyMotion
 nmap K Ek
 nmap J Ej
 nmap W Ew
@@ -102,18 +117,15 @@ vmap J Ej
 vmap W Ew
 vmap B Eb
 
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
-inoremap <C-d> <Right><C-h>
-inoremap <C-c> <C-[>
-inoremap <C-j> <C-r>=IMState('FixMode')<CR>
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
+" textmanip
 vmap <C-j> <Plug>(textmanip-move-down)
 vmap <C-k> <Plug>(textmanip-move-up)
 vmap <C-h> <Plug>(textmanip-move-left)
 vmap <C-l> <Plug>(textmanip-move-right)
+
+" neocomplcache
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 "-----------------------------
 " Local configuration
