@@ -7,6 +7,7 @@ SYMLINK_LIST="
 .zshrc
 .gitconfig
 .tmux.conf
+.muttrc
 "
 
 # セットアップスクリプトがあるパスの取得

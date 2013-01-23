@@ -1,0 +1,20 @@
+#---------------------
+# basic configuration
+#---------------------
+set mbox_type = Maildir
+set folder = "~/.Maildir"
+set spoolfile = "~/.Maildir"
+set mbox = "~/.Maildir"
+set mark_old = no
+
+#---------------------
+# mailboxes
+#---------------------
+mailboxes + `find ~/.Maildir -mindepth 1 -type d | egrep -v '/cur$|/tmp$|/new$' | xargs`
+
+#---------------------
+# key binding
+#---------------------
+bind index G last-entry
+bind index gg first-entry
+bind index e display-message
