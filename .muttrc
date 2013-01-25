@@ -6,6 +6,20 @@ set folder = "~/.Maildir"
 set spoolfile = "~/.Maildir"
 set mbox = "~/.Maildir"
 set mark_old = no
+set charset = "utf8"
+set folder_format = "%C %N %f"
+set index_format = "%Z | %{%Y-%m-%d} | %-15.15L | %E %s"
+set sort = threads
+
+set send_charset="us-ascii:iso-2022-jp"
+set assumed_charset="iso-2022-jp:euc-jp:shift_jis:utf-8"
+set thorough_search=yes
+set rfc2047_parameters=yes
+set edit_headers=yes
+
+color index color15 color0 ~p
+color index color105 color0 !~p
+color index color167 color0 ~N
 
 #---------------------
 # mailboxes
@@ -18,3 +32,5 @@ mailboxes + `find ~/.Maildir -mindepth 1 -type d | egrep -v '/cur$|/tmp$|/new$' 
 bind index G last-entry
 bind index gg first-entry
 bind index e display-message
+
+source ~/.muttrc.local
