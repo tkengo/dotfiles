@@ -72,6 +72,8 @@ bindkey "^N" history-beginning-search-forward-end
 #--------------------------------
 # alias
 #--------------------------------
+alias t="twitter"
+alias tt="twitter tweet"
 alias g="git"
 alias r="rails"
 alias be="bundle exec"
