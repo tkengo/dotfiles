@@ -94,14 +94,13 @@ inoremap <C-c> <C-[>
 inoremap <C-j> <C-r>=IMState('FixMode')<CR>
 
 " unite
-nnoremap <silent> ,fb :<C-u>Unite buffer<CR>
-nnoremap <silent> ,ff :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,flm :Unite rails/model<CR>
-nnoremap <silent> ,flc :Unite rails/controller<CR>
-nnoremap <silent> ,flv :Unite rails/view<CR>
-nnoremap <silent> ,flj :Unite rails/javascript<CR>
-nnoremap <silent> ,fls :Unite rails/stylesheet<CR>
-nnoremap <silent> ,flf :Unite rails/config<CR>
+nnoremap <silent> ,<C-f> :<C-u>Unite buffer<CR>
+nnoremap <silent> ,<C-m> :Unite rails/model<CR>
+nnoremap <silent> ,<C-c> :Unite rails/controller<CR>
+nnoremap <silent> ,<C-v> :Unite rails/view<CR>
+nnoremap <silent> ,<C-j> :Unite rails/javascript<CR>
+nnoremap <silent> ,<C-s> :Unite rails/stylesheet<CR>
+nnoremap <silent> ,<C-o> :Unite rails/config<CR>
 
 " Vundle
 nnoremap ,bi :BundleInstall<CR>
