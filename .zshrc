@@ -10,6 +10,7 @@ setopt hist_ignore_dups
 setopt share_history
 setopt extended_history
 setopt hist_find_no_dups
+setopt hist_reduce_blanks
 setopt no_hist_beep
 setopt auto_pushd
 setopt list_packed
