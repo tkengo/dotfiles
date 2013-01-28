@@ -21,7 +21,8 @@
     b = branch
     ba = branch -a
     lo = log
-    l = log --oneline
+    la = log --oneline
+    l = log -10 --oneline
     f = fetch
     pl = pull
     plo = pull origin
@@ -31,7 +32,8 @@
     psfo = push -f origin
     psom = push origin master
     r = rebase
-    t = log --oneline --decorate --all --decorate --graph
+    ta = log --oneline --decorate --all --decorate --graph
+    t = log -10 --oneline --decorate --all --decorate --graph
 [mergetool]
     prompt = false
     keepBackup = false
