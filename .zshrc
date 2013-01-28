@@ -17,14 +17,15 @@ setopt list_packed
 setopt nolistbeep
 setopt prompt_subst
 
-zstyle ':completion:*:*:kill:*' menu select=2
-zstyle ':completion:*:*:git:*' script ~/.dotfiles/bin/git-completion.sh
 zstyle ':completion:*' matcher-list '' 'r:|[-_.]=**'
 zstyle ':completion:*' verbose yes
+zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'ex=31'
+zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%B%U%F{red}%d%f%u%b'
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format 'No matches for: %d'
-zstyle ':completion:*' group-name ''
+zstyle ':completion:*:*:kill:*' menu select=2
+zstyle ':completion:*:*:git:*' script ~/.dotfiles/bin/git-completion.sh
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
