@@ -84,6 +84,7 @@ nnoremap <silent> <C-p> :bp<CR>
 nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
+nnoremap <silent> <C-l> :e .<CR>
 nnoremap ,<C-r> :source ~/.vimrc<CR>
 nnoremap <C-j> J
 inoremap <C-f> <Right>
