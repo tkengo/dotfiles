@@ -83,6 +83,7 @@ alias tt="twitter tweet"
 alias g="git"
 alias r="rails"
 alias be="bundle exec"
+alias pp="ps ax | grep"
 if [ `uname` = "Darwin" ]; then
     alias tmux="tmux_wrapper_for_mac.sh"
     alias ls="ls -pG"
