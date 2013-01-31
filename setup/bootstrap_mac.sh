@@ -16,6 +16,7 @@ tig
 tmux
 reattach-to-user-namespace
 zsh
+coreutils
 "
 for FORMULA in $FORMULAS; do
     [ ! -L /usr/local/bin/$FORMULA ] && brew install $FORMULA
