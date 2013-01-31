@@ -37,10 +37,10 @@ zle -N history-beginning-search-forward-end history-search-end
 
 precmd () { vcs_info }
 
-PROMPT="%{${fg[blue]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[yellow]}%}[%~]"$'\n'"%{${fg[blue]}%}[%n@%m] %{%(?..${fg[red]})%}%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"'${vcs_info_msg_0_}'
+RPROMPT='${vcs_info_msg_0_}'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
