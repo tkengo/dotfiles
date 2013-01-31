@@ -16,6 +16,7 @@ setopt auto_pushd
 setopt list_packed
 setopt nolistbeep
 setopt prompt_subst
+setopt no_beep
 
 zstyle ':completion:*' matcher-list '' 'r:|[-_.]=**'
 zstyle ':completion:*' verbose yes
