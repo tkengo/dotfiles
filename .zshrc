@@ -1,4 +1,50 @@
 #--------------------------------
+# environment variables export
+#--------------------------------
+BIN_PATH=~/.dotfiles/bin
+[ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
+
+export RBENV_ROOT=$HOME/.rbenv
+if [ -d $RBENV_ROOT ]; then
+    export PATH=$RBENV_ROOT/bin:$PATH
+    eval "$(rbenv init -)"
+fi
+
+export LANG=ja_JP.UTF-8
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[38;5;246m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[04;38;5;146m'
+
+#--------------------------------
+# alias
+#--------------------------------
+alias t="twitter"
+alias tt="twitter tweet"
+alias g="git"
+alias r="rails"
+alias be="bundle exec"
+alias pp="ps ax | grep"
+if [ `uname` = "Darwin" ]; then
+    alias tmux="tmux_wrapper_for_mac.sh"
+    which gls > /dev/null 2>&1
+    if [ $? -eq 1 ]; then
+        alias ls="ls -pGF"
+        alias ll="ls -plGF"
+    else
+        eval `gdircolors ~/.lscolorrc`
+        alias ls="gls -pF --color"
+        alias ll="gls -plF --color"
+    fi
+else
+    eval `dircolors ~/.lscolorrc`
+    alias ls="ls -p --color"
+fi
+
+#--------------------------------
 # zsh configuration
 #--------------------------------
 autoload colors && colors
@@ -20,7 +66,7 @@ setopt no_beep
 
 zstyle ':completion:*' matcher-list '' 'r:|[-_.]=**'
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'ex=31'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%B%U%F{red}%d%f%u%b'
 zstyle ':completion:*:messages' format '%d'
@@ -49,56 +95,10 @@ SAVEHIST=100000
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 #--------------------------------
-# environment variables export
-#--------------------------------
-BIN_PATH=~/.dotfiles/bin
-[ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
-
-export RBENV_ROOT=$HOME/.rbenv
-if [ -d $RBENV_ROOT ]; then
-    export PATH=$RBENV_ROOT/bin:$PATH
-    eval "$(rbenv init -)"
-fi
-
-export LANG=ja_JP.UTF-8
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;38;5;74m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[38;5;246m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[04;38;5;146m'
-
-#--------------------------------
 # key binding
 #--------------------------------
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
-#--------------------------------
-# alias
-#--------------------------------
-alias t="twitter"
-alias tt="twitter tweet"
-alias g="git"
-alias r="rails"
-alias be="bundle exec"
-alias pp="ps ax | grep"
-if [ `uname` = "Darwin" ]; then
-    alias tmux="tmux_wrapper_for_mac.sh"
-    which gls > /dev/null 2>&1
-    if [ $? -eq 1 ]; then
-        alias ls="ls -pGF"
-        alias ll="ls -plGF"
-    else
-        eval `gdircolors ~/.lscolorrc`
-        alias ls="gls -pF --color"
-        alias ll="gls -plF --color"
-    fi
-else
-    eval `dircolors ~/.lscolorrc`
-    alias ls="ls -p --color"
-fi
 
 #--------------------------------
 # read local settings
