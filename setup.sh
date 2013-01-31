@@ -8,6 +8,7 @@ SYMLINK_LIST="
 .gitconfig
 .tmux.conf
 .muttrc
+.lscolorrc
 "
 
 # セットアップスクリプトがあるパスの取得

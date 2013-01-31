@@ -68,7 +68,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[38;5;246m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[04;38;5;146m'
-export LS_COLORS='di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
 
 #--------------------------------
 # key binding
@@ -87,9 +86,17 @@ alias be="bundle exec"
 alias pp="ps ax | grep"
 if [ `uname` = "Darwin" ]; then
     alias tmux="tmux_wrapper_for_mac.sh"
-    alias ls="ls -pG"
-    alias ll="ls -plG"
+    which gls > /dev/null 2>&1
+    if [ $? -eq 1 ]; then
+        alias ls="ls -pGF"
+        alias ll="ls -plGF"
+    else
+        eval `gdircolors ~/.lscolorrc`
+        alias ls="gls -pF --color"
+        alias ll="gls -plF --color"
+    fi
 else
+    eval `dircolors ~/.lscolorrc`
     alias ls="ls -p --color"
 fi
 
