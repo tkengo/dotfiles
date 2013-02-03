@@ -28,6 +28,7 @@ alias g="git"
 alias r="rails"
 alias be="bundle exec"
 alias pp="ps ax | grep"
+alias -g G="| grep"
 if [ `uname` = "Darwin" ]; then
     alias tmux="tmux_wrapper_for_mac.sh"
     which gls > /dev/null 2>&1
