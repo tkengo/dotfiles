@@ -82,7 +82,18 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
-precmd () { vcs_info }
+precmd() { vcs_info }
+chpwd() {
+    local ls_lines=`ls -xA | wc -l | tr -d ' '`
+    if [ $ls_lines -gt 10 ]; then
+        ls_result=`ls -xA`
+        echo "$ls_result" | head -n 2
+        echo '...'
+        echo "$ls_result" | tail -n 2
+    else
+        ls -xA
+    fi
+}
 
 PROMPT="%{${fg[yellow]}%}[%~]"$'\n'"%{${fg[blue]}%}[%n@%m] %{%(?..${fg[red]})%}%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
