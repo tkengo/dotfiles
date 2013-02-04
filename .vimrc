@@ -84,9 +84,11 @@ nnoremap <silent> <C-p> :bp<CR>
 nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
-nnoremap <silent> <C-l> :e .<CR>
-nnoremap ,<C-r> :source ~/.vimrc<CR>
+nnoremap <silent> m :e .<CR>
+nnoremap <silent> ,<C-r> :source ~/.vimrc<CR>
+nnoremap <silent> S :w<CR>
 nnoremap <C-j> J
+nnoremap Q :qa<CR>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Right><C-h>
@@ -94,7 +96,7 @@ inoremap <C-c> <C-[>
 inoremap <C-j> <C-r>=IMState('FixMode')<CR>
 
 " unite
-nnoremap <silent> ,<C-f> :<C-u>Unite buffer<CR>
+nnoremap <silent> <C-m> :Unite buffer<CR>
 nnoremap <silent> ,<C-m> :Unite rails/model<CR>
 nnoremap <silent> ,<C-c> :Unite rails/controller<CR>
 nnoremap <silent> ,<C-v> :Unite rails/view<CR>
