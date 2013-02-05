@@ -63,7 +63,9 @@ let IM_CtrlIBusPython = 1
 " Plugin configuration
 "-----------------------------
 
-autocmd FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
+au FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
+
+au FileType unite nnoremap <silent><buffer><expr> e unite#do_action("open")
 
 let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
