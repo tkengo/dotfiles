@@ -87,7 +87,7 @@ nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
 nnoremap <silent> m :e .<CR>
-nnoremap <silent> ,<C-r> :source ~/.vimrc<CR>
+nnoremap ,<C-r> :source ~/.vimrc<CR>
 nnoremap <silent> S :w<CR>
 nnoremap <C-j> J
 nnoremap Q :qa<CR>
@@ -96,6 +96,10 @@ inoremap <C-b> <Left>
 inoremap <C-d> <Right><C-h>
 inoremap <C-c> <C-[>
 inoremap <C-j> <C-r>=IMState('FixMode')<CR>
+cmap <C-a> <Home>
+cmap <C-f> <Right>
+cmap <C-b> <Left>
+cmap <C-d> <Right><C-h>
 
 " unite
 nnoremap <silent> <C-m> :Unite buffer<CR>
