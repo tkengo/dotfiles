@@ -46,6 +46,17 @@ else
 fi
 
 #--------------------------------
+# define function
+#--------------------------------
+show_buffer_stack() {
+    ORG_PROMPT=$PROMPT
+    PROMPT="%{${fg[green]}%}stack%{${reset_color}%}: ${LBUFFER}"$'\n'"${PROMPT}"
+    zle reset-prompt
+    zle push-line-or-edit
+    PROMPT=$ORG_PROMPT
+}
+
+#--------------------------------
 # zsh configuration
 #--------------------------------
 autoload colors && colors
@@ -83,6 +94,7 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
+zle -N show_buffer_stack
 
 precmd() { vcs_info }
 chpwd() {
@@ -110,6 +122,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 #--------------------------------
 # key binding
 #--------------------------------
+bindkey "^S" show_buffer_stack
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
