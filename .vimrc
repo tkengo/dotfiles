@@ -24,6 +24,7 @@ Bundle 'ruby-matchit'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'h1mesuke/vim-alignta'
 Bundle 'basyura/unite-rails'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
