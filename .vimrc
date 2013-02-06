@@ -73,7 +73,7 @@ let g:vimfiler_safe_mode_by_default=0
 let g:neocomplcache_enable_at_startup=1
 
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
-let g:EasyMotion_leader_key="E"
+let g:EasyMotion_leader_key="-"
 let g:EasyMotion_grouping=1
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
@@ -102,7 +102,7 @@ cmap <C-b> <Left>
 cmap <C-d> <Right><C-h>
 
 " unite
-nnoremap <silent> <C-m> :Unite buffer<CR>
+nnoremap <silent> U :Unite buffer<CR>
 nnoremap <silent> ,<C-m> :Unite rails/model<CR>
 nnoremap <silent> ,<C-c> :Unite rails/controller<CR>
 nnoremap <silent> ,<C-v> :Unite rails/view<CR>
@@ -116,14 +116,14 @@ nnoremap ,bu :BundleInstall!<CR>
 nnoremap ,bc :BundleClean<CR>
 
 " EasyMotion
-nmap K Ek
-nmap J Ej
-nmap W Ew
-nmap B Eb
-vmap K Ek
-vmap J Ej
-vmap W Ew
-vmap B Eb
+nmap K -k
+nmap J -j
+nmap W -w
+nmap B -b
+vmap K -k
+vmap J -j
+vmap W -w
+vmap B -b
 
 " textmanip
 vmap <C-j> <Plug>(textmanip-move-down)
