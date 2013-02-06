@@ -20,8 +20,7 @@ CAPABILITY 30;41 # file with capability
 STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 
-#-----------------------
-# programing extensions
-#-----------------------
-.rb 38;05;208
-.php 38;05;208
+.yml 38;05;35
+.ini 38;05;35
+
+.log 38;05;61

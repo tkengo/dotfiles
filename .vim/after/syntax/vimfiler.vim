@@ -1,13 +1,16 @@
-syn match vimfilerNonMarkedFile     '.*'
+syn match vimfilerNonMarkedFile2     '.*'
       \ contains=vimfilerNonMark,vimfilerTypeText,vimfilerTypeImage,
       \vimfilerTypeArchive,vimfilerTypeExecute,vimfilerTypeMultimedia,
       \vimfilerTypeDirectory,vimfilerTypeSystem,vimfilerTypeLink,
       \vimfilerSize,vimfilerDate,vimfilerDateToday,vimfilerDateWeek,
-      \vimfilerSourceCode
+      \vimfilerConfigurationFile,vimfilerLogFile
 
-syn match vimfilerSourceCode '.*\.rb '  contained
-syn match vimfilerSourceCode '.*\.php ' contained
+syn match vimfilerConfigurationFile ' .*\.yml ' contained
+syn match vimfilerConfigurationFile ' .*\.ini ' contained
 
-hi vimfilerTypeDirectory ctermfg=63
-hi vimfilerSourceCode    ctermfg=208
-hi vimfilerTypeLink      ctermfg=5
+syn match vimfilerLogFile ' .*\.log ' contained
+
+hi vimfilerTypeDirectory     ctermfg=63
+hi vimfilerConfigurationFile ctermfg=35
+hi vimfilerLogFile           ctermfg=61
+hi vimfilerTypeLink          ctermfg=5
