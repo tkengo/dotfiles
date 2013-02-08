@@ -25,6 +25,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 alias t="twitter"
 alias tt="twitter tweet"
 alias g="git"
+alias v="vim"
 alias r="rails"
 alias be="bundle exec"
 alias pp="ps ax | grep"
