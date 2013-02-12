@@ -23,4 +23,8 @@ STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 .yml 38;05;35
 .ini 38;05;35
 
+.js 38;05;134
+.css 38;05;134
+.scss 38;05;134
+
 .log 38;05;61
