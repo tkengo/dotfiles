@@ -25,6 +25,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'h1mesuke/vim-alignta'
 Bundle 'basyura/unite-rails'
 Bundle 'scrooloose/syntastic'
+Bundle 'mattn/zencoding-vim'
 
 filetype plugin indent on
 
