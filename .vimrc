@@ -65,7 +65,7 @@ let IM_CtrlIBusPython = 1
 " Plugin configuration
 "-----------------------------
 
-au FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\) \zs
+au FileType vimfiler nnoremap <buffer> / /^\s*\(\|-\\|\|+\\|+\\|-\)* \zs
 
 au FileType unite nnoremap <silent><buffer><expr> e unite#do_action("open")
 
