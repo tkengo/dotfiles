@@ -94,6 +94,9 @@ nnoremap <silent> S :w<CR>
 nnoremap <C-j> J
 nnoremap Q :qa<CR>
 nnoremap Y y$
+nnoremap <C-h> ^
+nnoremap <C-l> $
+nnoremap Y y$
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Right><C-h>
