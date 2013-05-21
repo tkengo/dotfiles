@@ -23,7 +23,7 @@
     lo = log
     la = log --oneline
     l = log -10 --oneline
-    f = fetch
+    f = fetch --prune
     pl = pull
     plo = pull origin
     plom = pull origin master
