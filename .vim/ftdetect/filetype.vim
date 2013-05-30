@@ -1,1 +1,2 @@
-autocmd BufRead,BufNewFile Gemfile setfiletype ruby
+au! BufRead,BufNewFile Gemfile setf ruby
+au! BufRead,BufNewFile *.md setf markdown
