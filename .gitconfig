@@ -18,6 +18,7 @@
     a = add
     cb = checkout -b
     d = diff
+    dc = diff --cached
     b = branch
     ba = branch -a
     lo = log
