@@ -16,6 +16,7 @@
     cia = commit -a
     s = status
     a = add
+    un = reset HEAD
     cb = checkout -b
     d = diff
     dc = diff --cached
