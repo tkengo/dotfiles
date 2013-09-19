@@ -26,6 +26,12 @@ Bundle 'h1mesuke/vim-alignta'
 Bundle 'basyura/unite-rails'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
+Bundle 'csexton/trailertrash.vim'
+
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-line'
+Bundle 'kana/vim-textobj-underscore'
+Bundle 'deris/vim-textobj-enclosedsyntax'
 
 filetype plugin indent on
 
