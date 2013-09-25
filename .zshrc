@@ -97,7 +97,28 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 zle -N show_buffer_stack
 
-precmd() { vcs_info }
+_notification_time=5
+preexec() {
+    export _command_execution_time=$SECONDS
+    export _executed_command_name=$1
+}
+precmd() {
+    vcs_info
+
+    local exec_time
+
+    if [ -z "$_command_execution_time" ]; then
+        return
+    fi
+
+    exec_time=$(($SECONDS-$_command_execution_time))
+    if [ $exec_time -gt $_notification_time -a $TTYIDLE -gt $_notification_time ]; then
+        terminal-notifier -message "$_executed_command_name" -subtitle "complete (${exec_time}s)"
+    fi
+
+    unset _command_execution_time
+    unset _executed_command_name
+}
 chpwd() {
     local ls_lines=`ls -xA | wc -l | tr -d ' '`
     if [ $ls_lines -gt 10 ]; then
