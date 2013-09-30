@@ -26,7 +26,7 @@
     la = log --oneline
     l = log -10 --oneline
     f = fetch --prune
-    pl = pull
+    pl = !git pull origin `git rev-parse --abbrev-ref HEAD`
     plo = pull origin
     plom = pull origin master
     ps = push
