@@ -131,7 +131,7 @@ chpwd() {
     fi
 }
 
-PROMPT="%{${fg[yellow]}%}[%~]"$'\n'"%{${fg[blue]}%}[%n@%m] %{%(?..${fg[red]})%}%(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[yellow]}%}[%~]%(?. ⚡. 🔴)"$'\n'"%{${fg[blue]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT='${vcs_info_msg_0_}'
