@@ -141,6 +141,21 @@ HISTSIZE=100000
 SAVEHIST=100000
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+function u()
+{
+    if [ -z $1 ]; then
+        cd ../
+    else
+        to=$(perl -le '$p=$ENV{PWD}."/";$d="/".$ARGV[0]."/";$r=rindex($p,$d);\
+                       $r>=0 && print substr($p, 0, $r+length($d))' $1)
+        if [ "$to" = "" ]; then
+            echo "no such file or directory: $1" 1>&2
+            return 1
+        fi
+        cd $to
+    fi
+}
+
 #--------------------------------
 # key binding
 #--------------------------------
