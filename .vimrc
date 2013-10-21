@@ -14,7 +14,7 @@ Bundle 'Shougo/neosnippet'
 Bundle 'surround.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 't9md/vim-textmanip'
-Bundle 'rking/ag.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'JavaScript-syntax'
 Bundle 'tpope/vim-rails'
@@ -31,7 +31,9 @@ Bundle 'csexton/trailertrash.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
 Bundle 'kana/vim-textobj-underscore'
+Bundle 'kana/vim-textobj-datetime'
 Bundle 'deris/vim-textobj-enclosedsyntax'
+Bundle 'h1mesuke/textobj-wiw'
 
 filetype plugin indent on
 
