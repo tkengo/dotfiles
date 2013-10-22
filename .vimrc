@@ -27,6 +27,7 @@ Bundle 'basyura/unite-rails'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
 Bundle 'csexton/trailertrash.vim'
+Bundle 'kana/vim-smartinput'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
