@@ -28,6 +28,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
 Bundle 'csexton/trailertrash.vim'
 Bundle 'kana/vim-smartinput'
+Bundle 'slim-template/vim-slim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
