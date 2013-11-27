@@ -7,7 +7,7 @@ filetype off
 set rtp+=~/.dotfiles/vundle/
 call vundle#rc()
 
-Bundle 'unite.vim'
+Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
