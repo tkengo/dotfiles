@@ -92,6 +92,8 @@ let g:EasyMotion_grouping=1
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
+let g:syntastic_delayed_redraws=0
+
 "-----------------------------
 " key binding
 "-----------------------------
