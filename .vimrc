@@ -11,6 +11,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/vimproc'
 Bundle 'surround.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 't9md/vim-textmanip'
@@ -29,6 +30,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'csexton/trailertrash.vim'
 Bundle 'kana/vim-smartinput'
 Bundle 'slim-template/vim-slim'
+Bundle 'monochromegane/unite-yaml'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -150,6 +152,11 @@ vmap <C-l> <Plug>(textmanip-move-right)
 " neocomplcache
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" unite-yaml
+let g:unite_yaml_prefix = "Settings."
+nnoremap <silent> ,y  :<C-u>Unite yaml-list<CR>
+nnoremap <silent> ,Y  :<C-u>UniteResume yaml-buffer<CR>
 
 "-----------------------------
 " Local configuration
