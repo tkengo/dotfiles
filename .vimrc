@@ -28,7 +28,6 @@ Bundle 'basyura/unite-rails'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
 Bundle 'csexton/trailertrash.vim'
-Bundle 'kana/vim-smartinput'
 Bundle 'slim-template/vim-slim'
 Bundle 'monochromegane/unite-yaml'
 
