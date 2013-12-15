@@ -68,6 +68,7 @@ set fileencodings=utf-8,euc-jp,cp932,sjis
 
 au BufNewFile,BufRead *.erb set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rake set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.cap set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
