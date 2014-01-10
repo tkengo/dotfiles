@@ -30,6 +30,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'csexton/trailertrash.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'monochromegane/unite-yaml'
+Bundle 'kchmck/vim-coffee-script'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -70,6 +71,7 @@ au BufNewFile,BufRead *.erb set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rake set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.cap set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.coffee  set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1
