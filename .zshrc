@@ -36,6 +36,7 @@ alias v="vim"
 alias be="bundle exec"
 alias pp="ps ax | grep"
 alias -g G="| grep"
+alias r="rails"
 if [ `uname` = "Darwin" ]; then
     alias tmux="tmux_wrapper_for_mac.sh"
     which gls > /dev/null 2>&1
@@ -50,13 +51,6 @@ if [ `uname` = "Darwin" ]; then
 else
     eval `dircolors ~/.lscolorrc`
     alias ls="ls -p --color"
-fi
-
-which spring > /dev/null 2>&1
-if [ $? -eq 1 ]; then
-    alias r="bundle exec rails"
-else
-    alias r="spring rails"
 fi
 
 #--------------------------------
