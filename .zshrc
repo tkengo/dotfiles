@@ -171,6 +171,11 @@ function u()
 bindkey "^S" show_buffer_stack
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
+bindkey "^F" forward-char
+bindkey "^B" backward-char
+bindkey "^D" delete-char
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
 
 #--------------------------------
 # read local settings
