@@ -2,11 +2,11 @@
 # environment variables export
 #--------------------------------
 BIN_PATH=~/.dotfiles/bin
-[ -d $BIN_PATH ] && export PATH=$PATH:$BIN_PATH
+[ -d $BIN_PATH ] && export PATH=$BIN_PATH:$PATH
 
 export RBENV_ROOT=$HOME/.rbenv
 if [ -d $RBENV_ROOT ]; then
-    export PATH=$RBENV_ROOT/bin:$PATH
+    export PATH=$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH
     eval "$(rbenv init -)"
 fi
 
