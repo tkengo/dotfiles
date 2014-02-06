@@ -22,6 +22,9 @@ for FORMULA in $FORMULAS; do
     [ ! -L /usr/local/bin/$FORMULA ] && brew install $FORMULA
 done
 
+brew tap homebrew/eupes
+brew install homebrew/dupes/grep
+
 # zshをログインシェルに変更
 ZSH_PATH=/usr/local/bin/zsh
 SHELLS_PATH=/etc/shells
