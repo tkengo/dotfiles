@@ -9,6 +9,7 @@ SYMLINK_LIST="
 .tmux.conf
 .muttrc
 .lscolorrc
+.tmux-powerlinerc
 "
 
 # セットアップスクリプトがあるパスの取得
