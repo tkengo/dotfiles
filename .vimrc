@@ -100,8 +100,6 @@ let g:syntastic_delayed_redraws=0
 " key binding
 "-----------------------------
 nnoremap <silent> <C-k><C-k> :nohlsearch<CR><Esc>
-nnoremap <silent> <C-p> :bp<CR>
-nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
 nnoremap <silent> m :e .<CR>
