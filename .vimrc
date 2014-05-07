@@ -125,12 +125,6 @@ cmap <C-d> <Right><C-h>
 
 " unite
 nnoremap <silent> U :Unite buffer<CR>
-nnoremap <silent> ,<C-m> :Unite rails/model<CR>
-nnoremap <silent> ,<C-c> :Unite rails/controller<CR>
-nnoremap <silent> ,<C-v> :Unite rails/view<CR>
-nnoremap <silent> ,<C-j> :Unite rails/javascript<CR>
-nnoremap <silent> ,<C-s> :Unite rails/stylesheet<CR>
-nnoremap <silent> ,<C-o> :Unite rails/config<CR>
 
 " Vundle
 nnoremap ,bi :BundleInstall<CR>
