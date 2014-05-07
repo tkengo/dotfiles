@@ -30,6 +30,8 @@ Bundle 'csexton/trailertrash.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'monochromegane/unite-yaml'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/gtags.vim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -120,6 +122,13 @@ cmap <C-a> <Home>
 cmap <C-f> <Right>
 cmap <C-b> <Left>
 cmap <C-d> <Right><C-h>
+
+" gtags.vim
+nnoremap <C-g> :Gtags 
+nnoremap g<C-l> :Gtags -f %<CR>
+nnoremap g<C-j> :GtagsCursor<CR>
+nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cp<CR>
 
 " unite
 nnoremap <silent> U :Unite buffer<CR>
