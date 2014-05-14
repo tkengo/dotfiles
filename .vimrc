@@ -124,7 +124,7 @@ cmap <C-b> <Left>
 cmap <C-d> <Right><C-h>
 
 " gtags.vim
-nnoremap <C-g> :Gtags 
+nnoremap <C-g> :Gtags
 nnoremap g<C-l> :Gtags -f %<CR>
 nnoremap g<C-j> :GtagsCursor<CR>
 nnoremap <C-n> :cn<CR>
