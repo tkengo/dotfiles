@@ -53,6 +53,9 @@ else
     alias ls="ls -p --color"
 fi
 
+alias -s {png,jpg,gif,html}=open
+alias -s rb=ruby
+
 #--------------------------------
 # define function
 #--------------------------------
