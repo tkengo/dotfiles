@@ -32,6 +32,7 @@ Bundle 'monochromegane/unite-yaml'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/gtags.vim'
+Bundle 'rcmdnk/vim-markdown'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -97,6 +98,8 @@ hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 let g:syntastic_delayed_redraws=0
+
+let g:vim_markdown_folding_disabled=1
 
 "-----------------------------
 " key binding
