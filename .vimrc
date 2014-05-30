@@ -142,6 +142,10 @@ nnoremap ,bu :BundleInstall!<CR>
 nnoremap ,bc :BundleClean<CR>
 
 " EasyMotion
+let g:EasyMotion_enter_jump_first = 1
+let g:EasyMotion_space_jump_first = 1
+nmap s <Plug>(easymotion-s2)
+nmap / <Plug>(easymotion-sn)
 nmap K -k
 nmap J -j
 nmap W -w
