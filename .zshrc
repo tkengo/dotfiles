@@ -53,8 +53,10 @@ else
     alias ls="ls -p --color"
 fi
 
+function runc() { gcc $1; ./a.out }
 alias -s {png,jpg,gif,html}=open
 alias -s rb=ruby
+alias -s c=runc
 
 #--------------------------------
 # define function
