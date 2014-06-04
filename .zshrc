@@ -54,7 +54,7 @@ else
 fi
 
 function runc() { gcc $1; ./a.out }
-alias -s {png,jpg,gif,html}=open
+alias -s {png,jpg,gif,html,pdf}=open
 alias -s rb=ruby
 alias -s c=runc
 
