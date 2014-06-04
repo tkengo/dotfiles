@@ -11,6 +11,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle "Shougo/neosnippet-snippets"
 Bundle 'Shougo/vimproc'
 Bundle 'surround.vim'
 Bundle 'Lokaltog/vim-easymotion'
