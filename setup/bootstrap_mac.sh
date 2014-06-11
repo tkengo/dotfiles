@@ -9,22 +9,6 @@ if [ $? -eq 1 ]; then
     /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/aereal/master/Library/Contributions/install_homebrew.rb)"
 fi
 
-# ライブラリのインストール
-FORMULAS="
-git
-tig
-tmux
-reattach-to-user-namespace
-zsh
-coreutils
-"
-for FORMULA in $FORMULAS; do
-    [ ! -L /usr/local/bin/$FORMULA ] && brew install $FORMULA
-done
-
-brew tap homebrew/eupes
-brew install homebrew/dupes/grep
-
 # zshをログインシェルに変更
 ZSH_PATH=/usr/local/bin/zsh
 SHELLS_PATH=/etc/shells
