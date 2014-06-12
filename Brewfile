@@ -16,3 +16,4 @@ cask install google-chrome
 cask install dropbox
 cask install evernote
 cask install kobito
+cask install alfred
