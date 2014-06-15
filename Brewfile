@@ -10,6 +10,7 @@ install coreutils
 install weechat --with-perl --with-ruby --with-python --with-aspell
 install direnv
 install tree
+install global
 
 install brew-cask
 cask install google-chrome
