@@ -34,6 +34,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/gtags.vim'
 Bundle 'rcmdnk/vim-markdown'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
