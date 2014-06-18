@@ -173,6 +173,9 @@ let g:unite_yaml_prefix = "Settings."
 nnoremap <silent> ,y  :<C-u>Unite yaml-list<CR>
 nnoremap <silent> ,Y  :<C-u>UniteResume yaml-buffer<CR>
 
+" vim-indent-guides
+nmap <C-i> <Leader>ig
+
 "-----------------------------
 " Local configuration
 "-----------------------------
