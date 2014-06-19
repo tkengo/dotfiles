@@ -18,3 +18,4 @@ cask install dropbox
 cask install evernote
 cask install kobito
 cask install alfred
+cask install sequel-pro
