@@ -19,3 +19,4 @@ cask install evernote
 cask install kobito
 cask install alfred
 cask install sequel-pro
+cask install skype
