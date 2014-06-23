@@ -119,6 +119,8 @@ nnoremap Y y$
 nnoremap <C-h> ^
 nnoremap <C-l> $
 nnoremap Y y$
+inoremap <C-e> <Down>
+inoremap <C-y> <Up>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Right><C-h>
