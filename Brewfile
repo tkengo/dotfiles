@@ -20,3 +20,4 @@ cask install kobito
 cask install alfred
 cask install sequel-pro
 cask install skype
+cask install keyremap4macbook
