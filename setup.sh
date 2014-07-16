@@ -33,11 +33,5 @@ cd $DOTFILES_PATH
 git submodule init
 git submodule update
 
-# セットアップシェルの実行
-SHELL_LIST=`ls setup`
-for FILE in $SHELL_LIST; do
-    chmod +x setup/$FILE
-    sh setup/$FILE
-done
 
 echo Complete setup.sh
