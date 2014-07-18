@@ -65,7 +65,7 @@ set writebackup
 set incsearch
 set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set autoindent
 set smartindent
 set nowrap
