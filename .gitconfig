@@ -34,8 +34,8 @@
     psfo = push -f origin
     psom = push origin master
     r = rebase
-    ta = log --oneline --decorate --all --decorate --graph
-    t = log -10 --oneline --decorate --all --decorate --graph
+    ta = log --oneline --all --decorate --graph
+    t = log -10 --oneline --all --decorate --graph
     p = !git push origin `git rev-parse --abbrev-ref HEAD`
     delete-merged-branch = !git branch --merged | grep -v \\* | grep -v master | xargs -I % git branch -d %
 [mergetool]
