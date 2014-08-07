@@ -183,6 +183,7 @@ bindkey "^B" backward-char
 bindkey "^D" delete-char
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+bindkey "^R" history-incremental-search-backward
 
 #--------------------------------
 # read local settings
