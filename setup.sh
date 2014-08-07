@@ -13,23 +13,16 @@ SYMLINK_LIST="
 "
 
 # セットアップスクリプトがあるパスの取得
-DOTFILES_PATH=$(cd $(dirname $0);pwd)
-
-# binディレクトリのファイルに実行権限付与
-BIN_PATH=$DOTFILES_PATH/bin
-BIN_LIST=`ls $BIN_PATH`
-for FILE in $BIN_LIST; do
-    chmod +x $BIN_PATH/$FILE
-done
+BASE_DIR=$(cd $(dirname $0);pwd)
 
 # リストの分だけ繰り返してシンボリックリンクをはる
 for FILE in $SYMLINK_LIST; do
 	rm -fr ~/$FILE
-	ln -s $DOTFILES_PATH/$FILE ~/$FILE
+	ln -s $BASE_DIR/$FILE ~/$FILE
 done
 
 # Vundle更新
-cd $DOTFILES_PATH
+cd $BASE_DIR
 git submodule init
 git submodule update
 
