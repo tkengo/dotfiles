@@ -22,7 +22,7 @@ for FILE in $SYMLINK_LIST; do
 	ln -s $BASE_DIR/$FILE ~/$FILE
 done
 
-if [ `uname` != 'Darwin' ]; then
+if [ `uname` == 'Darwin' ]; then
     # homebrewのインストール
     which brew > /dev/null 2>&1
     if [ $? -eq 1 ]; then
