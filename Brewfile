@@ -3,7 +3,6 @@ update
 tap phinze/homebrew-cask
 tap sanemat/font
 
-install git
 install tig
 install tmux
 install reattach-to-user-namespace
