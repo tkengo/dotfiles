@@ -78,6 +78,7 @@ au BufNewFile,BufRead *.cap set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.coffee  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.yml  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.json  set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1
