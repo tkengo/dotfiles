@@ -32,7 +32,7 @@ if [ `uname` == 'Darwin' ]; then
     # Brewfileをもとに全部インストール
     brew bundle
 else
-    sudo yum install -y tig tmux zsh direnv global
+    sudo yum install -y tig tmux zsh direnv global --enablerepo=rpmforge
 fi
 
 # zshをログインシェルに変更
