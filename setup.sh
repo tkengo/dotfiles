@@ -18,8 +18,8 @@ cd $BASE_DIR
 
 # リストの分だけ繰り返してシンボリックリンクをはる
 for FILE in $SYMLINK_LIST; do
-	rm -fr ~/$FILE
-	ln -s $BASE_DIR/$FILE ~/$FILE
+    rm -fr ~/$FILE
+    ln -s $BASE_DIR/$FILE ~/$FILE
 done
 
 if [ `uname` == 'Darwin' ]; then
