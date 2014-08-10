@@ -22,6 +22,7 @@
     <item>
       <name>Up/Down Arrow to K/J</name>
       <identifier>private.arrow_to_key</identifier>
+      <not>Terminal</not>
       <autogen>--KeyToKey-- KeyCode::K, VK_CONTROL, KeyCode::CURSOR_UP</autogen>
       <autogen>--KeyToKey-- KeyCode::J, VK_CONTROL, KeyCode::CURSOR_DOWN</autogen>
     </item>
