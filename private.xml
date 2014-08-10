@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>Terminal</appname>
+    <equal>com.apple.Terminal</equal>
+  </appdef>
+  <list>
+    <item>
+      <name>LeaveInsMode with EISUU (Terminal)</name>
+      <identifier>private.app_terminal_esc_with_eisuu</identifier>
+      <only>Terminal</only>
+      <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+    </item>
+    <item>
+      <name>PrefixKey with EISUU (Terminal)</name>
+      <identifier>private.app_terminal_prefix_with_eisuu</identifier>
+      <only>Terminal</only>
+      <autogen>--KeyToKey-- KeyCode::Q, VK_CONTROL, KeyCode::JIS_EISUU, KeyCode::Q, VK_CONTROL</autogen>
+    </item>
+    <item>
+      <name>Up/Down Arrow to K/J</name>
+      <identifier>private.arrow_to_key</identifier>
+      <autogen>--KeyToKey-- KeyCode::K, VK_CONTROL, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, VK_CONTROL, KeyCode::CURSOR_DOWN</autogen>
+    </item>
+  </list>
+</root>
