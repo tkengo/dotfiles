@@ -35,6 +35,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/gtags.vim'
 Bundle 'rcmdnk/vim-markdown'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'vim-perl/vim-perl'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Bundle 'kana/vim-textobj-user'
@@ -79,6 +80,7 @@ au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.coffee  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.yml  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.json  set nowrap tabstop=2 shiftwidth=2
+au! BufNewFile,BufRead *.tt setf tt2html
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1
