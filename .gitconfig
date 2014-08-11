@@ -14,6 +14,7 @@
     co = checkout
     ci = commit
     cia = commit -a
+    cm = commit --amend --no-edit
     s = status
     st = stash
     a = add
