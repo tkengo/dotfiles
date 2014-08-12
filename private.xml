@@ -4,6 +4,11 @@
     <appname>Terminal</appname>
     <equal>com.apple.Terminal</equal>
   </appdef>
+  <appdef>
+    <appname>SEQUEL_PRO</appname>
+    <equal>com.sequelpro.SequelPro</equal>
+  </appdef>
+
   <list>
     <item>
       <name>LeaveInsMode with EISUU (Terminal)</name>
@@ -25,6 +30,12 @@
       <not>Terminal</not>
       <autogen>--KeyToKey-- KeyCode::K, VK_CONTROL, KeyCode::CURSOR_UP</autogen>
       <autogen>--KeyToKey-- KeyCode::J, VK_CONTROL, KeyCode::CURSOR_DOWN</autogen>
+    </item>
+    <item>
+      <name>Sequel Pro C-h to backspace</name>
+      <identifier>private.app_sequel_pro_c_h_to_backspace</identifier>
+      <only>SEQUEL_PRO</only>
+      <autogen>__KeyToKey__ KeyCode::H, VK_CONTROL, KeyCode::DELETE</autogen>
     </item>
   </list>
 </root>
