@@ -15,8 +15,10 @@
     ci = commit
     cia = commit -a
     cm = commit --amend --no-edit
+    cam = commit -a --amend --no-edit
     s = status
     st = stash
+    stp = stash pop
     a = add
     un = reset HEAD
     cb = checkout -b
