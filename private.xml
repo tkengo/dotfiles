@@ -8,6 +8,10 @@
     <appname>SEQUEL_PRO</appname>
     <equal>com.sequelpro.SequelPro</equal>
   </appdef>
+  <appdef>
+    <appname>AndroidStudio</appname>
+    <equal>com.google.android.studio</equal>
+  </appdef>
 
   <list>
     <item>
@@ -35,6 +39,12 @@
       <name>Sequel Pro C-h to backspace</name>
       <identifier>private.app_sequel_pro_c_h_to_backspace</identifier>
       <only>SEQUEL_PRO</only>
+      <autogen>__KeyToKey__ KeyCode::H, VK_CONTROL, KeyCode::DELETE</autogen>
+    </item>
+    <item>
+      <name>Android Studio C-h to backspace, and C-d to delete</name>
+      <identifier>private.android_studio_c</identifier>
+      <only>AndroidStudio</only>
       <autogen>__KeyToKey__ KeyCode::H, VK_CONTROL, KeyCode::DELETE</autogen>
     </item>
   </list>
