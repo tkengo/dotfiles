@@ -23,6 +23,14 @@
       <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
     </item>
     <item>
+      <name>LeaveInsMode with EISUU (AndroidStudio)</name>
+      <identifier>private.app_android_studio_esc_with_eisuu</identifier>
+      <only>AndroidStudio</only>
+      <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+    </item>
+    <item>
       <name>PrefixKey with EISUU (Terminal)</name>
       <identifier>private.app_terminal_prefix_with_eisuu</identifier>
       <only>Terminal</only>
@@ -39,12 +47,6 @@
       <name>Sequel Pro C-h to backspace</name>
       <identifier>private.app_sequel_pro_c_h_to_backspace</identifier>
       <only>SEQUEL_PRO</only>
-      <autogen>__KeyToKey__ KeyCode::H, VK_CONTROL, KeyCode::DELETE</autogen>
-    </item>
-    <item>
-      <name>Android Studio C-h to backspace, and C-d to delete</name>
-      <identifier>private.android_studio_c</identifier>
-      <only>AndroidStudio</only>
       <autogen>__KeyToKey__ KeyCode::H, VK_CONTROL, KeyCode::DELETE</autogen>
     </item>
   </list>
