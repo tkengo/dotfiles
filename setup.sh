@@ -4,6 +4,7 @@
 SYMLINK_LIST="
 .vim
 .vimrc
+.ideavimrc
 .zshrc
 .gitconfig
 .tmux.conf
