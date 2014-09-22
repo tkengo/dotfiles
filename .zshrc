@@ -173,6 +173,18 @@ function u()
 }
 
 #--------------------------------
+# for ssh agent forwarding
+#--------------------------------
+SSH_AGENT_FILE=~/.ssh_agent_file
+if [ -f "$SSH_AGENT_FILE" ]; then
+    source $SSH_AGENT_FILE > /dev/null
+else
+    ssh-agent > $SSH_AGENT_FILE
+    source $SSH_AGENT_FILE > /dev/null
+    ssh-add > /dev/null 2>&1
+fi
+
+#--------------------------------
 # key binding
 #--------------------------------
 bindkey "^S" show_buffer_stack
