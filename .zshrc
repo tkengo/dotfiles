@@ -176,12 +176,14 @@ function u()
 # for ssh agent forwarding
 #--------------------------------
 SSH_AGENT_FILE=~/.ssh_agent_file
-if [ -f "$SSH_AGENT_FILE" ]; then
-    source $SSH_AGENT_FILE > /dev/null
-else
+if [ -z "$(ps ax | grep ssh-agent | grep -v grep)" ]; then
     ssh-agent > $SSH_AGENT_FILE
     source $SSH_AGENT_FILE > /dev/null
     ssh-add > /dev/null 2>&1
+fi
+
+if [ -f "$SSH_AGENT_FILE" ]; then
+    source $SSH_AGENT_FILE > /dev/null
 fi
 
 #--------------------------------
