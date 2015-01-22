@@ -27,6 +27,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'h1mesuke/vim-alignta'
 Bundle 'basyura/unite-rails'
 Bundle 'scrooloose/syntastic'
+Bundle 'mattn/emmet-vim'
 Bundle 'csexton/trailertrash.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'monochromegane/unite-yaml'
@@ -122,7 +123,8 @@ nnoremap Q :qa<CR>
 nnoremap Y y$
 nnoremap <C-h> ^
 nnoremap <C-l> $
-nnoremap Y y$
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 inoremap <C-e> <Down>
 inoremap <C-y> <Up>
 inoremap <C-f> <Right>
@@ -137,10 +139,11 @@ cmap <C-d> <Right><C-h>
 
 " gtags.vim
 nnoremap <C-g> :Gtags
-nnoremap g<C-l> :Gtags -f %<CR>
+nnoremap g<C-f> :Gtags -f %<CR>
+nnoremap g<C-r> :Gtags -r %<CR>
 nnoremap g<C-j> :GtagsCursor<CR>
-nnoremap <C-n> :cn<CR>
-nnoremap <C-p> :cp<CR>
+nnoremap g<C-n> :cn<CR>
+nnoremap g<C-p> :cp<CR>
 
 " unite
 nnoremap <silent> U :Unite buffer<CR>
@@ -173,6 +176,7 @@ vmap <C-l> <Plug>(textmanip-move-right)
 " neocomplcache
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 " unite-yaml
 let g:unite_yaml_prefix = "Settings."
