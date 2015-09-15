@@ -37,6 +37,7 @@ Bundle 'vim-scripts/gtags.vim'
 Bundle 'rcmdnk/vim-markdown'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-perl/vim-perl'
+Bundle 'fatih/vim-go'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Bundle 'kana/vim-textobj-user'

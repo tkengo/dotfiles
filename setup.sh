@@ -40,26 +40,6 @@ else
     sudo yum install -y vim tig tmux zsh direnv global --enablerepo=rpmforge
 fi
 
-# zshをログインシェルに変更
-ZSH_PATH=$(which zsh)
-SHELLS_PATH=/etc/shells
-if [ -z "`cat $SHELLS_PATH | grep $ZSH_PATH`" ]; then
-    sudo sh -c "echo $ZSH_PATH >> $SHELLS_PATH"
-fi
-if [ $SHELL != $ZSH_PATH ]; then
-    chsh -s $ZSH_PATH
-fi
-
-# rbenvのインストール
-if [ ! -d ~/.rbenv ]; then
-    git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-fi
-
-# ruby-buildのインストール
-if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
-    git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-fi
-
 # Vundle更新
 git submodule init
 git submodule update

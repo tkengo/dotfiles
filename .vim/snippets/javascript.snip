@@ -1,0 +1,111 @@
+snippet steps
+    // (1) webglコンテキストの取得
+
+    // (2) シェーダのコンパイル
+
+    // (3) ロケーションの取得
+
+    // (4) 頂点座標の準備
+
+    // (5) 頂点インデックスの準備
+
+    // (6) ポリゴンの描画
+
+snippet compile_vshader
+    var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+    var vertexSource = document.getElementById('vertex-shader').text;
+    gl.shaderSource(vertexShader, vertexSource);
+    gl.compileShader(vertexShader);
+
+snippet compile_fshader
+    var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+    var fragmentSource = document.getElementById('fragment-shader').text;
+    gl.shaderSource(fragmentShader, fragmentSource);
+    gl.compileShader(fragmentShader);
+
+snippet create_program
+    var program = gl.createProgram();
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, fragmentShader);
+    gl.linkProgram(program);
+    gl.useProgram(program);
+
+snippet square_vertices
+    var vertices = [
+        -0.5, -0.5, 0.0, // 左下
+        +0.5, -0.5, 0.0, // 右下
+        -0.5, +0.5, 0.0, // 左上
+        +0.5, +0.5, 0.0  // 右上
+    ];
+
+snippet square_indices
+    var indices = [
+        0, 1, 2, // 1個目の三角形
+        1, 3, 2  // 2個目の三角形
+    ];
+
+snippet cube_vertices
+    var vertices = [
+        // 手前の面
+        -0.5, -0.5, +0.5,
+        +0.5, -0.5, +0.5,
+        -0.5, +0.5, +0.5,
+        +0.5, +0.5, +0.5,
+
+        // 右側の面
+        +0.5, -0.5, +0.5,
+        +0.5, -0.5, -0.5,
+        +0.5, +0.5, +0.5,
+        +0.5, +0.5, -0.5,
+
+        // 左側の面
+        -0.5, -0.5, -0.5,
+        -0.5, -0.5, +0.5,
+        -0.5, +0.5, -0.5,
+        -0.5, +0.5, +0.5,
+
+        // 奥の面
+        +0.5, -0.5, -0.5,
+        -0.5, -0.5, -0.5,
+        +0.5, +0.5, -0.5,
+        -0.5, +0.5, -0.5,
+
+        // 上の面
+        -0.5, +0.5, +0.5,
+        +0.5, +0.5, +0.5,
+        -0.5, +0.5, -0.5,
+        +0.5, +0.5, -0.5,
+
+        // 下の面
+        -0.5, -0.5, -0.5,
+        +0.5, -0.5, -0.5,
+        -0.5, -0.5, +0.5,
+        +0.5, -0.5, +0.5
+    ];
+
+snippet cube_indices
+    var indices = [
+        // 手前の面
+        0, 1, 2,
+        1, 3, 2,
+
+        // 右側の面
+        4, 5, 6,
+        5, 7, 6,
+
+        // 左側の面
+        8, 9,  10,
+        9, 11, 10,
+
+        // 奥の面
+        12, 13, 14,
+        13, 15, 14,
+
+        // 上の面
+        16, 17, 18,
+        17, 19, 18,
+
+        // 下の面
+        20, 21, 22,
+        21, 23, 22
+    ];
