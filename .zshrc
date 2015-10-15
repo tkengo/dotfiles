@@ -10,7 +10,7 @@ if [ -d $RBENV_ROOT ]; then
     eval "$(rbenv init -)"
 fi
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 which direnv > /dev/null 2>&1
 if [ $? -ne 1 ]; then
