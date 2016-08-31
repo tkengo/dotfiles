@@ -18,6 +18,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 't9md/vim-textmanip'
 Bundle 'mileszs/ack.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'isRuslan/vim-es6'
 Bundle 'JavaScript-syntax'
 Bundle 'tpope/vim-rails'
 Bundle 'tomtom/tcomment_vim'
@@ -82,6 +83,10 @@ au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.coffee  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.yml  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.json  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.py  set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.c  set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.cpp set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.h  set nowrap tabstop=4 shiftwidth=4
 au! BufNewFile,BufRead *.tt setf tt2html
 
 " IBus control by Python
