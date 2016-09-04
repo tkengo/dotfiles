@@ -13,6 +13,10 @@
     <equal>com.google.android.studio</equal>
   </appdef>
   <appdef>
+    <appname>IntelliJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+  </appdef>
+  <appdef>
     <appname>SLACK</appname>
     <equal>com.tinyspeck.slackmacgap</equal>
   </appdef>
@@ -30,6 +34,14 @@
       <name>LeaveInsMode with EISUU (AndroidStudio)</name>
       <identifier>private.app_android_studio_esc_with_eisuu</identifier>
       <only>AndroidStudio</only>
+      <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+    </item>
+    <item>
+      <name>LeaveInsMode with EISUU (IntelliJ IDEA)</name>
+      <identifier>private.app_intellij_idea_esc_with_eisuu</identifier>
+      <only>IntelliJ</only>
       <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
       <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
       <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
