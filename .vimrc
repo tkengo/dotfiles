@@ -88,6 +88,9 @@ au BufNewFile,BufRead *.c  set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.cpp set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.h  set nowrap tabstop=4 shiftwidth=4
 au! BufNewFile,BufRead *.tt setf tt2html
+au BufNewFile,BufRead *.pm  set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.tt  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.tt2html  set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1
