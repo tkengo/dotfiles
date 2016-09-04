@@ -4,6 +4,7 @@
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$BIN_PATH:$PATH
 
+export JAVA_HOME="$(/usr/libexec/java_home)"
 export RBENV_ROOT=$HOME/.rbenv
 if [ -d $RBENV_ROOT ]; then
     export PATH=$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH
@@ -27,6 +28,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 export EDITOR=vim
 export DIRENV_RUBY=/usr/bin/ruby
+export LF=$'\\\x0A'
 
 #--------------------------------
 # alias
