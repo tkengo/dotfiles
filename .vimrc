@@ -39,7 +39,7 @@ Bundle 'rcmdnk/vim-markdown'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-perl/vim-perl'
 Bundle 'fatih/vim-go'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'itchyny/lightline.vim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -60,6 +60,9 @@ colorscheme my
 set t_Co=256
 set number
 set laststatus=2
+set showmode " 現在のモードを表示
+set showcmd " 打ったコマンドをステータスラインの下に表示
+set ruler " ステータスラインの右側にカーソルの現在位置を表示する
 set hlsearch
 set cursorline
 set hidden
@@ -74,7 +77,9 @@ set autoindent
 set smartindent
 set nowrap
 set vb t_vb=
+set ambiwidth=double
 set fileencodings=utf-8,euc-jp,cp932,sjis
+set whichwrap=b,s,h,l,<,>,[,],~ " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
 
 au BufNewFile,BufRead *.erb set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rake set nowrap tabstop=2 shiftwidth=2
@@ -87,7 +92,7 @@ au BufNewFile,BufRead *.py  set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.c  set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.cpp set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.h  set nowrap tabstop=4 shiftwidth=4
-au! BufNewFile,BufRead *.tt setf tt2html
+au BufNewFile,BufRead *.tt setf tt2html
 au BufNewFile,BufRead *.pm  set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.tt  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.tt2html  set nowrap tabstop=2 shiftwidth=2
