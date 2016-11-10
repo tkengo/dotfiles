@@ -4,7 +4,9 @@
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$BIN_PATH:$PATH
 
-export JAVA_HOME="$(/usr/libexec/java_home)"
+if [ -e /usr/libexec/java_home ]; then
+    export JAVA_HOME="$(/usr/libexec/java_home)"
+fi
 export RBENV_ROOT=$HOME/.rbenv
 if [ -d $RBENV_ROOT ]; then
     export PATH=$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH
