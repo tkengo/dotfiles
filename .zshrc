@@ -133,7 +133,10 @@ precmd() {
 
     exec_time=$(($SECONDS-$_command_execution_time))
     if [ $exec_time -gt $_notification_time -a $TTYIDLE -gt $_notification_time ]; then
-        terminal-notifier -message "$_executed_command_name" -subtitle "complete (${exec_time}s)"
+        which terminal-notifier > /dev/null 2>&1
+        if [ $? -ne 1 ]; then
+            terminal-notifier -message "$_executed_command_name" -subtitle "complete (${exec_time}s)"
+        fi
     fi
 
     unset _command_execution_time
