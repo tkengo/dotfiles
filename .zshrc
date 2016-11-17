@@ -21,6 +21,7 @@ if [ $? -ne 1 ]; then
 fi
 
 export LANG=ja_JP.UTF-8
+export LESS='-M -R -N'
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -31,6 +32,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 export EDITOR=vim
 export DIRENV_RUBY=/usr/bin/ruby
 export LF=$'\\\x0A'
+export PAGER='less'
 
 #--------------------------------
 # alias
