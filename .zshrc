@@ -42,6 +42,7 @@ alias tt="twitter tweet"
 alias g="git"
 alias v="vim"
 alias be="bundle exec"
+alias pp="ps ax | grep -v grep | grep"
 alias -g G="| hw"
 alias r="rails"
 if [ `uname` = "Darwin" ]; then
@@ -59,13 +60,6 @@ else
     eval `dircolors ~/.lscolorrc`
     alias ls="ls -p --color"
 fi
-
-PPCMD="grep --color"
-which hw > /dev/null 2>&1
-if [ $? -eq 0 ]; then
-    PPCMD=hw
-fi
-alias pp="ps ax | $PPCMD"
 
 function runc() { gcc $1 && shift && ./a.out $@ }
 alias -s {png,jpg,gif,html,pdf}=open
