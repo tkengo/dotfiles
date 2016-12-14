@@ -126,13 +126,12 @@ let g:vim_markdown_folding_disabled=1
 "-----------------------------
 " key binding
 "-----------------------------
-nnoremap <silent> <C-k><C-k> :nohlsearch<CR><Esc>
+nnoremap <silent> <C-i><C-i> :nohlsearch<CR><Esc>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
 nnoremap <silent> m :e .<CR>
 nnoremap ,<C-r> :source ~/.vimrc<CR>
 nnoremap <silent> S :w<CR>
-nnoremap <C-j> J
 nnoremap Q :qa<CR>
 nnoremap Y y$
 nnoremap <C-h> ^
@@ -172,12 +171,12 @@ let g:EasyMotion_enter_jump_first = 1
 let g:EasyMotion_space_jump_first = 1
 nmap s <Plug>(easymotion-s2)
 nmap / <Plug>(easymotion-sn)
-nmap K -k
-nmap J -j
+nmap <C-k> -k
+nmap <C-j> -j
 nmap W -w
 nmap B -b
-vmap K -k
-vmap J -j
+vmap <C-k> -k
+vmap <C-j> -j
 vmap W -w
 vmap B -b
 
