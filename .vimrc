@@ -40,6 +40,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-perl/vim-perl'
 Bundle 'fatih/vim-go'
 Bundle 'itchyny/lightline.vim'
+Bundle 'evanmiller/nginx-vim-syntax'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -61,7 +62,6 @@ set t_Co=256
 set number
 set laststatus=2
 set showmode " 現在のモードを表示
-set showcmd " 打ったコマンドをステータスラインの下に表示
 set ruler " ステータスラインの右側にカーソルの現在位置を表示する
 set hlsearch
 set cursorline
@@ -126,7 +126,7 @@ let g:vim_markdown_folding_disabled=1
 "-----------------------------
 " key binding
 "-----------------------------
-nnoremap <silent> <C-i><C-i> :nohlsearch<CR><Esc>
+nnoremap <silent> <C-k><C-k> :nohlsearch<CR><Esc>
 nnoremap <silent> ,<C-d> :bd<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let @/=@"<CR>:noh<CR>
 nnoremap <silent> m :e .<CR>
