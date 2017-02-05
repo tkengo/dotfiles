@@ -12,6 +12,18 @@ if [ -d $RBENV_ROOT ]; then
     export PATH=$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH
     eval "$(rbenv init -)"
 fi
+export PYENV_ROOT=$HOME/.pyenv
+if [ -d $PYENV_ROOT ]; then
+    export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+    eval "$(pyenv init -)"
+    if [ -d $PYENV_ROOT/plugins/pyenv-virtualenv ]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
+fi
+export GOPATH=$HOME/.go
+if [ ! -d $GOPATH ]; then
+    mkdir -p $GOPATH
+fi
 
 export PATH=/usr/local/bin:$HOME/bin:$PATH
 
