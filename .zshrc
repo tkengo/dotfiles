@@ -7,11 +7,15 @@ BIN_PATH=~/.dotfiles/bin
 if [ -e /usr/libexec/java_home ]; then
     export JAVA_HOME="$(/usr/libexec/java_home)"
 fi
+
+# For rbenv variables
 export RBENV_ROOT=$HOME/.rbenv
 if [ -d $RBENV_ROOT ]; then
     export PATH=$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH
     eval "$(rbenv init -)"
 fi
+
+# For pyenv variables
 export PYENV_ROOT=$HOME/.pyenv
 if [ -d $PYENV_ROOT ]; then
     export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
@@ -20,6 +24,14 @@ if [ -d $PYENV_ROOT ]; then
         eval "$(pyenv virtualenv-init -)"
     fi
 fi
+
+# For plenv variables
+export PLENV_ROOT=$HOME/.plenv
+if [ -d $PLENV_ROOT ]; then
+    export PATH=$PLENV_ROOT/shims:$PLENV_ROOT/bin:$PATH
+    eval "$(plenv init -)"
+fi
+
 export GOPATH=$HOME/.go
 if [ ! -d $GOPATH ]; then
     mkdir -p $GOPATH
