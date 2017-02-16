@@ -4,12 +4,11 @@
     name = Kengo Tateishi
 [core]
     editor = vim
+    pager = cat
 [color]
     ui = auto
 [diff]
     external = git_vimdiff.sh
-[pager]
-    diff = 
 [alias]
     co = checkout
     ci = commit
