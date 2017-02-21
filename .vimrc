@@ -120,6 +120,7 @@ hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 let g:syntastic_delayed_redraws=0
+let g:syntastic_python_checkers = ['pylint']
 
 let g:vim_markdown_folding_disabled=1
 
@@ -171,14 +172,14 @@ let g:EasyMotion_enter_jump_first = 1
 let g:EasyMotion_space_jump_first = 1
 nmap s <Plug>(easymotion-s2)
 nmap / <Plug>(easymotion-sn)
-nmap <C-k> -k
-nmap <C-j> -j
-nmap W -w
-nmap B -b
-vmap <C-k> -k
-vmap <C-j> -j
-vmap W -w
-vmap B -b
+nmap zk -k
+nmap zj -j
+nmap zw -w
+nmap zb -b
+vmap zk -k
+vmap zj -j
+vmap zw -w
+vmap zb -b
 
 " textmanip
 vmap <C-j> <Plug>(textmanip-move-down)
