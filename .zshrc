@@ -1,9 +1,12 @@
 #--------------------------------
 # environment variables export
 #--------------------------------
+export PATH=/usr/local/bin:$HOME/bin:$PATH
+
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$BIN_PATH:$PATH
 
+# For Java variables
 if [ -e /usr/libexec/java_home ]; then
     export JAVA_HOME="$(/usr/libexec/java_home)"
 fi
@@ -32,12 +35,11 @@ if [ -d $PLENV_ROOT ]; then
     eval "$(plenv init -)"
 fi
 
+# For GO variables
 export GOPATH=$HOME/.go
 if [ ! -d $GOPATH ]; then
     mkdir -p $GOPATH
 fi
-
-export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 which direnv > /dev/null 2>&1
 if [ $? -ne 1 ]; then
@@ -88,6 +90,7 @@ fi
 function runc() { gcc $1 && shift && ./a.out $@ }
 alias -s {png,jpg,gif,html,pdf}=open
 alias -s rb=ruby
+alias -s py=python
 alias -s c=runc
 
 #--------------------------------

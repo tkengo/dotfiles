@@ -25,14 +25,8 @@ for FILE in $SYMLINK_LIST; do
 done
 
 if [ `uname` == 'Darwin' ]; then
-    # For Mac OS X.
-    # Install homebrew.
-    which brew > /dev/null 2>&1
-    if [ $? -eq 1 ]; then
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-    fi
-
-    brew bundle
+    # Do Nothing
+    echo Darwing Setup
 elif [[ -f /etc/debian_version ]]; then
     # For Debian destribution.
     sudo apt-get install -y vim tig tmux zsh global ctags
