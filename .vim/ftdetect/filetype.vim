@@ -8,3 +8,5 @@ au! BufRead,BufNewFile .pryrc setf ruby
 au! BufRead,BufNewFile *.cap setf ruby
 au! BufRead,BufNewFile *.md setf markdown
 au! BufRead,BufNewFile *.psgi setf perl
+au! BufRead,BufNewFile *.sql  setf mysql
+au! BufRead,BufNewFile *.ddl setf mysql
