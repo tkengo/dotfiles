@@ -38,7 +38,5 @@ appsWatcher = hs.application.watcher.new(handleGlobalAppEvent)
 appsWatcher:start()
 
 -- カーソル移動
-remapKey({'ctrl'}, 'l', keyCode('right'))
-remapKey({'ctrl'}, 'h', keyCode('left'))
 remapKey({'ctrl'}, 'j', keyCode('down'))
 remapKey({'ctrl'}, 'k', keyCode('up'))
