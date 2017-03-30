@@ -12,6 +12,7 @@ SYMLINK_LIST="
 .lscolorrc
 .tmux-powerlinerc
 .gemrc
+.hammerspoon
 "
 
 # Get the path of this script, and move there.
