@@ -40,3 +40,4 @@ appsWatcher:start()
 -- カーソル移動
 remapKey({'ctrl'}, 'j', keyCode('down'))
 remapKey({'ctrl'}, 'k', keyCode('up'))
+remapKey({'ctrl'}, 'h', keyCode('delete'))
