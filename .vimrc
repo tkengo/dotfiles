@@ -126,6 +126,7 @@ let g:syntastic_delayed_redraws=0
 let g:syntastic_python_checkers = ['pylint']
 
 let g:vim_markdown_folding_disabled=1
+let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of'}
 
 "-----------------------------
 " key binding

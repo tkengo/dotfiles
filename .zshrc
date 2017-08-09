@@ -92,6 +92,7 @@ alias -s {png,jpg,gif,html,pdf}=open
 alias -s rb=ruby
 alias -s py=python
 alias -s c=runc
+alias -s php=php
 
 #--------------------------------
 # define function
