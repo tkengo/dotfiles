@@ -71,6 +71,7 @@ alias be="bundle exec"
 alias pp="ps ax | grep -v grep | grep --color"
 alias -g G="| hw"
 alias r="rails"
+alias u2s="nkf -s -W"
 if [ `uname` = "Darwin" ]; then
     alias tmux="tmux_wrapper_for_mac.sh"
     which gls > /dev/null 2>&1
@@ -85,6 +86,7 @@ if [ `uname` = "Darwin" ]; then
 else
     eval `dircolors ~/.lscolorrc`
     alias ls="ls -p --color"
+    alias ll="ls -lp --color"
 fi
 
 function runc() { gcc $1 && shift && ./a.out $@ }
