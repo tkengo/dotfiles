@@ -44,5 +44,6 @@ git submodule init
 git submodule update
 
 vim +:BundleInstall +:qa
+cd ~/.vim/bundle/vimproc && make
 
 echo Complete setup.sh
