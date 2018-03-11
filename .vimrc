@@ -40,7 +40,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-perl/vim-perl'
 Bundle 'fatih/vim-go'
 Bundle 'itchyny/lightline.vim'
-Bundle 'evanmiller/nginx-vim-syntax'
+Bundle 'chr4/nginx.vim'
 Bundle 'autowitch/hive.vim'
 
 Bundle 'kana/vim-textobj-user'
