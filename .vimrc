@@ -98,6 +98,9 @@ au BufNewFile,BufRead *.pm  set nowrap tabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.tt  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.tt2html  set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
+au BufNewFile,BufRead *.html  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.scss  set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1
