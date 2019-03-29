@@ -42,6 +42,8 @@ Bundle 'fatih/vim-go'
 Bundle 'itchyny/lightline.vim'
 Bundle 'chr4/nginx.vim'
 Bundle 'autowitch/hive.vim'
+Bundle 'othree/yajs.vim'
+Bundle 'maxmellon/vim-jsx-pretty'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -143,10 +145,13 @@ nnoremap ,<C-r> :source ~/.vimrc<CR>
 nnoremap <silent> S :w<CR>
 nnoremap Q :qa<CR>
 nnoremap Y y$
-nnoremap <C-h> ^
-nnoremap <C-l> $
+nnoremap <C-h> g^
+nnoremap <C-l> g$
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
+nnoremap j gj
+nnoremap k gk
+nnoremap $ g$
 inoremap <C-e> <Down>
 inoremap <C-y> <Up>
 inoremap <C-f> <Right>
