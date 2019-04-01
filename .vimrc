@@ -79,6 +79,7 @@ set expandtab
 set autoindent
 set smartindent
 set nowrap
+set wrapscan
 set vb t_vb=
 set ambiwidth=double
 set fileencodings=utf-8,euc-jp,cp932,sjis
