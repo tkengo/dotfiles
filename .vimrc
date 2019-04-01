@@ -135,6 +135,16 @@ let g:vim_markdown_folding_disabled=1
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of'}
 let g:go_version_warning=0
 
+let g:lightline = {
+            \   'component_function':{
+            \     'filename': 'FilePath'
+            \   }
+            \ }
+
+function! FilePath()
+    return substitute(expand("%:p"), getcwd(), '.', 'g')
+endfunction
+
 "-----------------------------
 " key binding
 "-----------------------------
