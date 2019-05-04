@@ -72,6 +72,9 @@ alias pp="ps ax | grep -v grep | grep --color"
 alias -g G="| hw"
 alias r="rails"
 alias u2s="nkf -s -W"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 if [ `uname` = "Darwin" ]; then
     alias tmux="tmux_wrapper_for_mac.sh"
     which gls > /dev/null 2>&1
