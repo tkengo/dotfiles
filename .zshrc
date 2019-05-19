@@ -41,6 +41,12 @@ if [ ! -d $GOPATH ]; then
     mkdir -p $GOPATH
 fi
 
+# For nodejs variable
+export NVM_DIR="$HOME/.nvm"
+if [ -d $NVM_DIR ]; then
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fi
+
 which direnv > /dev/null 2>&1
 if [ $? -ne 1 ]; then
     eval "$(direnv hook zsh)"
