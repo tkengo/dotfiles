@@ -84,6 +84,7 @@ set vb t_vb=
 set ambiwidth=double
 set fileencodings=utf-8,euc-jp,cp932,sjis
 set whichwrap=b,s,h,l,<,>,[,],~ " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
+set backspace=indent,eol,start
 
 au BufNewFile,BufRead *.erb set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rake set nowrap tabstop=2 shiftwidth=2
