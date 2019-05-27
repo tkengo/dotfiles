@@ -164,6 +164,7 @@ nnoremap <C-p> :bp<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap $ g$
+nnoremap ,cp gg"*yG
 inoremap <C-e> <Down>
 inoremap <C-y> <Up>
 inoremap <C-f> <Right>
