@@ -172,6 +172,7 @@ inoremap <C-b> <Left>
 inoremap <C-d> <Right><C-h>
 inoremap <C-c> <C-[>
 inoremap <C-j> <C-r>=IMState('FixMode')<CR>
+vnoremap ,cp "*y
 cmap <C-a> <Home>
 cmap <C-f> <Right>
 cmap <C-b> <Left>
