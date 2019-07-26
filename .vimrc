@@ -27,7 +27,7 @@ Bundle 'ruby-matchit'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'h1mesuke/vim-alignta'
 Bundle 'basyura/unite-rails'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 Bundle 'mattn/emmet-vim'
 Bundle 'csexton/trailertrash.vim'
 Bundle 'slim-template/vim-slim'
@@ -44,6 +44,7 @@ Bundle 'chr4/nginx.vim'
 Bundle 'autowitch/hive.vim'
 Bundle 'othree/yajs.vim'
 Bundle 'maxmellon/vim-jsx-pretty'
+Bundle 'thinca/vim-quickrun'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -130,17 +131,44 @@ hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 let g:syntastic_delayed_redraws=0
-let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_python_checkers = ['pylint']
 
 let g:vim_markdown_folding_disabled=1
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of'}
 let g:go_version_warning=0
 
+
+function! My_running()
+    if quickrun#is_running()
+        return "Running..."
+    else
+        return ""
+    endif
+endfunction
+
 let g:lightline = {
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'], ['readonly', 'filename', 'modified', 'quickrun'] ]
+      \ },
             \   'component_function':{
-            \     'filename': 'FilePath'
+            \     'filename': 'FilePath',
+            \     'quickrun': 'My_running'
             \   }
             \ }
+
+"" quickrunのランナーにvimprocを使用する
+"" 成功時はバッファへ
+"" エラー時はquickfixへ出力
+let g:quickrun_config = get(g:, 'quickrun_config', {})
+let g:quickrun_config._ = {
+            \   'runner'    : 'vimproc',
+            \   'runner/vimproc/updatetime' : 60,
+            \   'outputter' : 'error',
+            \   'outputter/error/success' : 'buffer',
+            \   'outputter/error/error'   : 'quickfix',
+            \   'outputter/buffer/split'  : ':rightbelow 8sp',
+            \   'outputter/buffer/close_on_empty' : 1,
+            \}
 
 function! FilePath()
     return substitute(expand("%:p"), getcwd(), '.', 'g')
@@ -170,7 +198,6 @@ inoremap <C-y> <Up>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Right><C-h>
-inoremap <C-c> <C-[>
 inoremap <C-j> <C-r>=IMState('FixMode')<CR>
 vnoremap ,cp "*y
 cmap <C-a> <Home>
