@@ -13,6 +13,7 @@ SYMLINK_LIST="
 .tmux-powerlinerc
 .gemrc
 .hammerspoon
+.config
 "
 
 # Get the path of this script, and move there.
