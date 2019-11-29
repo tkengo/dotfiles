@@ -45,6 +45,7 @@ Bundle 'autowitch/hive.vim'
 Bundle 'othree/yajs.vim'
 Bundle 'maxmellon/vim-jsx-pretty'
 Bundle 'thinca/vim-quickrun'
+Bundle 'leafgarland/typescript-vim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
