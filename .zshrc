@@ -69,8 +69,7 @@ export PAGER='less'
 #--------------------------------
 # alias
 #--------------------------------
-alias t="twitter"
-alias tt="twitter tweet"
+alias tf="terraform"
 alias g="git"
 alias v="vim"
 alias be="bundle exec"
@@ -268,3 +267,5 @@ bindkey "^R" history-incremental-search-backward
 #--------------------------------
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+export PATH="$HOME/.run/bin:$PATH"

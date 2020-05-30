@@ -11,3 +11,4 @@ inoremap <C-u> <C-o>d^
 inoremap <C-w> <C-o>db
 nnoremap <C-h> ^
 nnoremap <C-l> $
+set ideajoin

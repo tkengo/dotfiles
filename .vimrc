@@ -46,6 +46,7 @@ Bundle 'othree/yajs.vim'
 Bundle 'maxmellon/vim-jsx-pretty'
 Bundle 'thinca/vim-quickrun'
 Bundle 'leafgarland/typescript-vim'
+Bundle 'chrisbra/csv.vim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-line'
@@ -53,6 +54,8 @@ Bundle 'kana/vim-textobj-underscore'
 Bundle 'kana/vim-textobj-datetime'
 Bundle 'deris/vim-textobj-enclosedsyntax'
 Bundle 'h1mesuke/textobj-wiw'
+
+Bundle 'hashivim/vim-terraform'
 
 filetype plugin indent on
 
@@ -88,25 +91,29 @@ set fileencodings=utf-8,euc-jp,cp932,sjis
 set whichwrap=b,s,h,l,<,>,[,],~ " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
 set backspace=indent,eol,start
 
-au BufNewFile,BufRead *.erb set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.rake set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.cap set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.erb     set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.rake    set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.cap     set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.rb      set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.coffee  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.yml  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.json  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.py  set nowrap tabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.c  set nowrap tabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.cpp set nowrap tabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.h  set nowrap tabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.tt setf tt2html
-au BufNewFile,BufRead *.pm  set nowrap tabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.tt  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.tt2html  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.hql set filetype=hive expandtab
-au BufNewFile,BufRead *.html  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.js  set nowrap tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.scss  set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.yml     set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.yaml    set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.json    set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.py      set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.c       set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.cpp     set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.h       set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.tt      setf tt2html
+au BufNewFile,BufRead *.pm      set nowrap tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.tt      set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.tt2html set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.hql     set filetype=hive expandtab
+au BufNewFile,BufRead *.html    set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js      set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.ts      set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.tsx     set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.scss    set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.proto   set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1
