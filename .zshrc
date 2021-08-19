@@ -173,6 +173,50 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 zle -N show_buffer_stack
 
+sr() {
+    # read -q "REPLY?This is the question I want to ask?"
+    read _sr_confirmation\?'朝ごはんなに食べた？ >'
+    if [ "$_sr_confirmation" = "srs" ]; then
+        export _show_sr=1
+        export _show_sr_period=${1:-10}
+        export _start_show_sr_time=$SECONDS
+    fi
+}
+srr() {
+    unset _show_sr
+    unset _start_show_sr_time
+}
+_srcat() {
+    if [ ! -z "$_start_show_sr_time" ]; then
+        SR_DIFF=$(($SECONDS-$_start_show_sr_time))
+        if [ $SR_DIFF -gt $_show_sr_period ]; then
+            srr
+        fi
+    fi
+
+    if [ ! -z "$_show_sr" ]; then
+        SR_NUMS=$(($(tput cols)/40))
+        CONVERT_FILES=
+        for SEQ in $(seq $SR_NUMS); do
+            FIRST_THUMB_NO=$(($RANDOM%8))
+            if [ $FIRST_THUMB_NO -eq 7 ]; then
+                SECOND_THUMB_NO=$(($RANDOM%4))
+                THIRD_THUMB_NO=$(($RANDOM%968))
+            else
+                SECOND_THUMB_NO=$(($RANDOM%10))
+                THIRD_THUMB_NO=$(($RANDOM%1000))
+            fi
+            PADDED_THIRD_THUMB_NO=$(printf "%03d" $THIRD_THUMB_NO)
+            CONVERT_FILES="$CONVERT_FILES $HOME/tmp/.sr/thumbnails/0$FIRST_THUMB_NO/$SECOND_THUMB_NO/image-0${FIRST_THUMB_NO}${SECOND_THUMB_NO}${PADDED_THIRD_THUMB_NO}.webp"
+        done
+
+        TMP_THUMB_FILE=/tmp/sr.thumb.jpg
+        convert +append ${=CONVERT_FILES} $TMP_THUMB_FILE
+        imgcat $TMP_THUMB_FILE
+        rm -f $TMP_THUMB_FILE
+    fi
+}
+
 _notification_time=5
 preexec() {
     export _command_execution_time=$SECONDS
@@ -195,6 +239,7 @@ precmd() {
         fi
     fi
 
+    _srcat
     unset _command_execution_time
     unset _executed_command_name
 }
@@ -209,6 +254,7 @@ chpwd() {
         ls -xA
     fi
 }
+
 
 PROMPT="%{${fg[yellow]}%}[%~]%(?. ⚡. 🔴)"$'\n'"%{${fg[blue]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
@@ -252,6 +298,7 @@ fi
 #--------------------------------
 # key binding
 #--------------------------------
+bindkey -e
 bindkey "^S" show_buffer_stack
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
@@ -262,8 +309,20 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
 
+function do_enter() {
+    zle accept-line
+    if [ -z "$BUFFER" ]; then
+        _srcat
+        return 0
+    fi
+}
+zle -N do_enter
+bindkey "" do_enter
+
 #--------------------------------
 # read local settings
 #--------------------------------
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+export PATH="$HOME/.run/bin:$PATH"
