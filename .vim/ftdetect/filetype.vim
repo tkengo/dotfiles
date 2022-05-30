@@ -11,6 +11,8 @@ au! BufRead,BufNewFile *.psgi setf perl
 au! BufRead,BufNewFile *.sql  setf mysql
 au! BufRead,BufNewFile *.ddl setf mysql
 au! BufRead,BufNewFile *.tsx setf typescript.tsx
+au! BufNewFile,BufRead *.dig set filetype=yaml
+au! Syntax yaml setl indentkeys-=<:> indentkeys-=0#
 
 au! BufRead,BufNewFile *.pql call SetPqlOptions()
 function SetPqlOptions()
