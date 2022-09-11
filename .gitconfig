@@ -3,12 +3,12 @@
 [user]
     name = Kengo Tateishi
 [core]
-    editor = vim
+    editor = nvim
     pager = cat
 [color]
     ui = auto
 [diff]
-    external = git_vimdiff.sh
+    external = git_nvimdiff.sh
 [alias]
     co = checkout
     ci = commit
@@ -46,3 +46,8 @@
     keepBackup = false
 [merge]
     tool = vimdiff
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

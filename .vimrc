@@ -9,7 +9,7 @@ call vundle#rc()
 
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/neocomplcache'
+" Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle "Shougo/neosnippet-snippets"
 Bundle 'Shougo/vimproc'
@@ -114,6 +114,7 @@ au BufNewFile,BufRead *.ts      set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.tsx     set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.scss    set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.proto   set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.jsx     set nowrap tabstop=2 shiftwidth=2
 
 " IBus control by Python
 let IM_CtrlIBusPython = 1

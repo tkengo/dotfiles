@@ -72,6 +72,7 @@ export PAGER='less'
 alias tf="terraform"
 alias g="git"
 alias v="vim"
+alias nv="nvim"
 alias be="bundle exec"
 alias pp="ps ax | grep -v grep | grep --color"
 alias -g G="| hw"
