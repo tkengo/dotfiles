@@ -11,4 +11,3 @@ au! BufRead,BufNewFile *.psgi setf perl
 au! BufRead,BufNewFile *.sql  setf mysql
 au! BufRead,BufNewFile *.ddl setf mysql
 au! BufRead,BufNewFile *.tsx setf typescript.tsx
-au! BufRead,BufNewFile *.js setf jsx

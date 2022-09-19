@@ -199,11 +199,6 @@ _G.packer_plugins = {
     path = "/Users/tkengo/.local/share/nvim/site/pack/packer/start/vim-matchup",
     url = "https://github.com/andymass/vim-matchup"
   },
-  ["vim-rails"] = {
-    loaded = true,
-    path = "/Users/tkengo/.local/share/nvim/site/pack/packer/start/vim-rails",
-    url = "https://github.com/tpope/vim-rails"
-  },
   ["vim-textmanip"] = {
     loaded = true,
     path = "/Users/tkengo/.local/share/nvim/site/pack/packer/start/vim-textmanip",
