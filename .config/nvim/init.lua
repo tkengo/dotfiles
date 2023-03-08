@@ -11,6 +11,8 @@ require('packer').startup(function(use)
   use 't9md/vim-textmanip'
   use 'numToStr/Comment.nvim'
   -- use 'tpope/vim-rails'
+  -- use 'neoclide/vim-jsx-improve'
+  use 'maxmellon/vim-jsx-pretty'
   use 'lewis6991/gitsigns.nvim'
   use 'phaazon/hop.nvim'
   use 'kevinhwang91/nvim-fFHighlight'
@@ -56,6 +58,35 @@ require('mason-lspconfig').setup_handlers({ function(server)
   }
   require('lspconfig')[server].setup(opt)
 end })
+local cmp = require('cmp')
+cmp.setup({
+  snippet = {
+    -- REQUIRED - you must specify a snippet engine
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'vsnip' }, -- For vsnip users.
+    -- { name = 'luasnip' }, -- For luasnip users.
+    -- { name = 'ultisnips' }, -- For ultisnips users.
+    -- { name = 'snippy' }, -- For snippy users.
+  }, {
+    { name = 'buffer' },
+  })
+})
+
 require('telescope').load_extension('fzf')
 require('telescope').setup {
   pickers = {
@@ -101,7 +132,8 @@ require('nvim-treesitter.configs').setup {
     additional_vim_regex_highlighting = true
   },
   indent = {
-    enable = true
+    -- disable = { 'ruby', 'javascript' }
+    disable = true
   },
   ensure_installed = {
     'javascript',
@@ -109,7 +141,9 @@ require('nvim-treesitter.configs').setup {
     'ruby',
     'query',
     'json',
-    'markdown'
+    'markdown',
+    'lua',
+    'hcl'
   },
   rainbow = {
     enable = true,
@@ -140,9 +174,13 @@ require('nvim-treesitter.configs').setup {
 }
 require('nvim-treesitter.highlight').set_custom_captures {
   ['property.key'] = 'TSPropertyKey',
+  ['function.call.noargs'] = 'TSFunctionCallNoArgs',
+  ['keyword.const'] = 'TSKeywordConst',
+  ['keyword.rspec'] = 'TSKeywordRSpec',
 }
 require('lualine').setup {
   sections = {
+    lualine_b = {'diff'},
     lualine_c = {
       {
         'filename',
@@ -150,6 +188,14 @@ require('lualine').setup {
       }
     },
   },
+  inactive_sections = {
+    lualine_c = {
+      {
+        'filename',
+        path = 1
+      }
+    },
+  }
 }
 require('nvim-surround').setup()
 require('Comment').setup()
@@ -212,8 +258,8 @@ hi LspReferenceRead  gui=NONE guifg=white guibg=#444444
 hi LspReferenceWrite gui=NONE guifg=white guibg=#444444
 augroup lsp_document_highlight
   autocmd!
-  autocmd CursorHold,CursorHoldI * lua vim.lsp.buf.document_highlight()
-  autocmd CursorMoved,CursorMovedI * lua vim.lsp.buf.clear_references()
+  autocmd CursorHold,CursorHoldI ruby.javascript.typescript lua vim.lsp.buf.document_highlight()
+  autocmd CursorMoved,CursorMovedI ruby.javascript.typescript lua vim.lsp.buf.clear_references()
 augroup END
 ]]
 

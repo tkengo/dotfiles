@@ -8,6 +8,9 @@ hi TSConditional guifg=#5a8de0
 hi TSSymbol guifg=#b27af5 gui=bold
 hi TSPropertyKey guifg=#a687c9
 hi TSBoolean guifg=#f04357 gui=bold
+hi TSFunctionCallNoArgs guifg=#cccccc
+hi TSKeywordConst guifg=#ffc13b
+hi TSKeywordRSpec guifg=#9898d9
 hi link TSTagAttribute BlueItalic
 hi TSInclude guifg=#c7eb44
 hi TSString guifg=#ba7956

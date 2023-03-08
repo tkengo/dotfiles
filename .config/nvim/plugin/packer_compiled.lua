@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/tkengo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/Users/tkengo/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
+  },
   ["vim-matchup"] = {
     loaded = true,
     path = "/Users/tkengo/.local/share/nvim/site/pack/packer/start/vim-matchup",

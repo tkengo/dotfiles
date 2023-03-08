@@ -12,11 +12,5 @@
   name: (identifier) @variable
   )
 
-["const"] @keyword.const
+"const" @keyword.const
 ["async" "await"] @keyword.operator
-; (variable_declarator
-;   name: (identifier) @variable
-;   value: (arrow_function))
-; (variable_declarator
-;   name: (identifier) @variable
-;   value: (function))
