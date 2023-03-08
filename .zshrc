@@ -1,7 +1,7 @@
 #--------------------------------
 # environment variables export
 #--------------------------------
-export PATH=/usr/local/bin:$HOME/bin:$HOME/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$HOME/.dotfiles/bin:$HOME/.run/bin:$PATH
 
 BIN_PATH=~/.dotfiles/bin
 [ -d $BIN_PATH ] && export PATH=$BIN_PATH:$PATH
@@ -325,5 +325,3 @@ bindkey "" do_enter
 #--------------------------------
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
-export PATH="$HOME/.run/bin:$PATH"
