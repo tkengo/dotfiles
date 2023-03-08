@@ -25,7 +25,7 @@ require('packer').startup(function(use)
   use 'sainnhe/sonokai'
   use 'EdenEast/nightfox.nvim'
   use 'glepnir/zephyr-nvim'
-  -- use 'p00f/nvim-ts-rainbow'
+  use 'p00f/nvim-ts-rainbow'
   use 'andymass/vim-matchup'
   use 'nvim-treesitter/playground'
 
@@ -129,15 +129,15 @@ require("nvim-tree").setup {
 require('nvim-treesitter.configs').setup {
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = true
+    additional_vim_regex_highlighting = false
   },
   indent = {
-    -- disable = { 'ruby', 'javascript' }
     disable = true
   },
   ensure_installed = {
     'javascript',
     'typescript',
+    'tsx',
     'ruby',
     'query',
     'json',
@@ -145,11 +145,11 @@ require('nvim-treesitter.configs').setup {
     'lua',
     'hcl'
   },
-  -- rainbow = {
-  --   enable = true,
-  --   extended_mode = true,
-  --   max_file_lines = nil,
-  -- },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  },
   matchup = {
     enable = true,
   },
@@ -172,12 +172,6 @@ require('nvim-treesitter.configs').setup {
     },
   }
 }
--- require('nvim-treesitter.highlight').set_custom_captures {
---   ['property.key'] = 'TSPropertyKey',
---   ['function.call.noargs'] = 'TSFunctionCallNoArgs',
---   ['keyword.const'] = 'TSKeywordConst',
---   ['keyword.rspec'] = 'TSKeywordRSpec',
--- }
 require('lualine').setup {
   sections = {
     lualine_b = {'diff'},

@@ -1,3 +1,5 @@
+;; extends
+
 (import_statement
   (import_clause
     (identifier) @type

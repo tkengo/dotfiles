@@ -1,3 +1,5 @@
+;; extends
+
 ((identifier) @keyword.rspec
  (#vim-match? @keyword.rspec "^(let!?|it|describe|context|before|after|double|instance_double|class_double|spy|instance_spy|class_spy|response|request)$"))
 
