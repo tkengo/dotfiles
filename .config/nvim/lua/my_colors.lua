@@ -10,6 +10,7 @@ hi Keyword guifg=#5a8de0
 hi KeywordReturn guifg=#5a8de0
 hi Conditional guifg=#5a8de0
 hi Symbol guifg=#b27af5 gui=bold
+hi MyNormal guifg=#cccccc
 hi PropertyKey guifg=#a687c9
 hi Boolean guifg=#f04357 gui=bold
 hi FunctionCallNoArgs guifg=#cccccc
@@ -24,7 +25,11 @@ hi VariableBuiltin guifg=#f39660 gui=bold
 
 vim.api.nvim_set_hl(0, "@keyword", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "@keyword.return", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "@keyword.function", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "@conditional", { link = "Conditional" })
+vim.api.nvim_set_hl(0, "@operator", { link = "MyNormal" })
 vim.api.nvim_set_hl(0, "@symbol", { link = "Symbol" })
+vim.api.nvim_set_hl(0, "@property", { link = "MyNormal" })
 vim.api.nvim_set_hl(0, "@property.key", { link = "PropertyKey" })
 vim.api.nvim_set_hl(0, "@keyword.const", { link = "KeywordConst" })
 vim.api.nvim_set_hl(0, "@keyword.rspec", { link = "KeywordRSpec" })

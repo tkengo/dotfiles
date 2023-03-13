@@ -50,11 +50,16 @@ require('packer').startup(function(use)
 end)
 
 require('mason').setup()
-require('mason-lspconfig').setup_handlers({ function(server)
+local mason_lspconfig = require("mason-lspconfig")
+mason_lspconfig.setup {
+  ensure_installed = {
+    "solargraph",
+    "tsserver"
+  }
+}
+mason_lspconfig.setup_handlers({ function(server)
   local opt = {
-    capabilities = require('cmp_nvim_lsp').update_capabilities(
-      vim.lsp.protocol.make_client_capabilities()
-    )
+    capabilities = require('cmp_nvim_lsp').default_capabilities()
   }
   require('lspconfig')[server].setup(opt)
 end })
@@ -132,6 +137,7 @@ require('nvim-treesitter.configs').setup {
     additional_vim_regex_highlighting = false
   },
   indent = {
+    -- enable = true
     disable = true
   },
   ensure_installed = {
